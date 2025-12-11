@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Technomate.Models;
 using Technomate.Repositories;
+using Technomate.Repository;
 //using Technomate.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +13,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddScoped<IContactRepository, ContactRepository>();
 builder.Services.AddScoped<IBlogRepository, BlogRepository>();
+builder.Services.AddScoped<IPortfolioRepository, PortfolioRepository>();
+
 
 var app = builder.Build();
 

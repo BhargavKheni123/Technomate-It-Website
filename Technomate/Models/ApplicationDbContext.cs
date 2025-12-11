@@ -11,6 +11,8 @@ namespace Technomate.Models
 
         public DbSet<ContactMessage> ContactMessages { get; set; }
         public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Portfolio> Portfolios { get; set; }
+
 
     }
 }

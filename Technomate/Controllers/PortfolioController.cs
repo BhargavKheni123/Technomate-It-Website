@@ -1,17 +1,31 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Technomate.Models;
+using Technomate.Repository;
 
 namespace Technomate.Controllers
 {
     public class PortfolioController : Controller
     {
-        public IActionResult Portfolio()
+        private readonly IPortfolioRepository _repo;
+
+        public PortfolioController(IPortfolioRepository repo)
         {
-            return View();
+            _repo = repo;
         }
 
-        public IActionResult PortfolioDetails()
+        public IActionResult Portfolio()
         {
-            return View();
+            var data = _repo.GetAll();
+            return View(data);
         }
+
+        public IActionResult PortfolioDetails(int id)
+        {
+            var item = _repo.GetById(id);
+            if (item == null) return NotFound();
+            return View(item);
+        }
+
+
     }
 }
