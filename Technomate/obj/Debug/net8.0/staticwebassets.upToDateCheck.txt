@@ -1,3 +1,4 @@
+wwwroot\assets\css\custom.css
 wwwroot\assets\css\main.css
 wwwroot\assets\img\about.jpg
 wwwroot\assets\img\apple-touch-icon.png
@@ -139,6 +140,9 @@ wwwroot\img\blog\blog-post-square-2.webp
 wwwroot\img\blog\blog-post-square-3.webp
 wwwroot\img\blog\blog-post-square-4.webp
 wwwroot\img\blog\blog-post-square-5.webp
+wwwroot\img\clients\envato.png
+wwwroot\img\clients\jquery.png
+wwwroot\img\clients\less.png
 wwwroot\img\clients\magento.png
 wwwroot\img\clients\pingdom.png
 wwwroot\img\clients\sass.png

@@ -80,7 +80,13 @@
                                                 </div>
                                                 <p class="flex-grow-1">@blog.Summary</p>
                                                 <div class="read-more mt-auto">
-                                                    <a href="@Url.Action("BlogDetails", "Blog", new { slug = blog.Slug })" class="btn btn-primary btn-sm">Read More</a>
+                                                    <div class="read-more mt-auto">
+                                                        <a href="@Url.Action("BlogDetails", "Blog", new { slug = blog.Slug })"
+                                                           class="btn btn-primary btn-sm"
+                                                           style="background-color: #2f5f7a !important; border-color: #2f5f7a !important;">
+                                                            Read More
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </article>
@@ -106,10 +112,13 @@
                                     @for (int i = 1; i <= Model.TotalPages; i++)
                                     {
                                         <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
-                                            <a class="page-link" href="@Url.Action("Blog", new { page = i })">@i</a>
+                                            <a class="page-link"
+                                               href="@Url.Action("Blog", new { page = i })"
+                                               style="@(i == Model.CurrentPage ? "background-color: #2f5f7a !important; border-color: #2f5f7a !important; color: #fff;" : "")">
+                                                @i
+                                            </a>
                                         </li>
                                     }
-
                                     <!-- Next -->
                                     <li class="page-item @(Model.CurrentPage == Model.TotalPages ? "disabled" : "")">
                                         <a class="page-link" href="@Url.Action("Blog", new { page = Model.CurrentPage + 1 })">

@@ -54,71 +54,76 @@
                 </a>
 
                 <nav id="navmenu" class="navmenu">
-                    <ul>
-                        <li><a href="@Url.Action("Index", "Home")" class="active">Home</a></li>
-                        <li><a href="@Url.Action("Aboutus", "Aboutus")">About</a></li>
-                        <li class="nav-item dropdown d-flex align-items-center">
-    <a class="nav-link" href="/Service/Services">
-        SERVICE
-    </a>
+    <ul>
+        <li><a href="@Url.Action("Index", "Home")" 
+            class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Home" && ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")">Home</a></li>
+        <li><a href="@Url.Action("Aboutus", "Aboutus")"
+            class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Aboutus" ? "active" : "")">About</a></li>
+        <li class="nav-item dropdown d-flex align-items-center">
+     <a class="nav-link" href="/Service/Services">
+         SERVICE
+     </a>
 
-    <a class="nav-link dropdown-toggle px-1"
-       href="#"
-       id="serviceDropdown"
-       role="button"
-       data-bs-toggle="dropdown"
-       aria-expanded="false"
-       style="cursor:pointer;">
-        <i class="fa-solid fa-angle-down ms-1" style="font-size: 12px;"></i>
-    </a>
-    <ul class="dropdown-menu mt-2 shadow" aria-labelledby="serviceDropdown">
+     <a class="nav-link dropdown-toggle px-1"
+        href="#"
+        id="serviceDropdown"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+        style="cursor:pointer;">
+         <i class="fa-solid fa-angle-down ms-1" style="font-size: 12px;"></i>
+     </a>
+     <ul class="dropdown-menu mt-2 shadow" aria-labelledby="serviceDropdown">
 
-        <li>
-            <a class="dropdown-item d-flex align-items-center" href="/Service/WebDevelopment">
-                <i class="fa-solid fa-code me-2 " style="color:#2f5f7a;"></i> Web Development
-            </a>
-        </li>
+         <li>
+             <a class="dropdown-item d-flex align-items-center" href="/Service/WebDevelopment">
+                 <i class="fa-solid fa-code me-2 " style="color:#2f5f7a;"></i> Web Development
+             </a>
+         </li>
 
-        <li>
-            <a class="dropdown-item d-flex align-items-center" href="/Service/LogoIdentity">
-                <i class="fa-solid fa-id-card me-2 " style="color:#2f5f7a;"></i> Logo & Identity
-            </a>
-        </li>
+         <li>
+             <a class="dropdown-item d-flex align-items-center" href="/Service/LogoIdentity">
+                 <i class="fa-solid fa-id-card me-2 " style="color:#2f5f7a;"></i> Logo & Identity
+             </a>
+         </li>
 
-        <li>
-            <a class="dropdown-item d-flex align-items-center" href="/Service/GraphicsDesign">
-                <i class="fa-solid fa-paintbrush me-2 " style="color:#2f5f7a;"></i> Graphics Design
-            </a>
-        </li>
+         <li>
+             <a class="dropdown-item d-flex align-items-center" href="/Service/GraphicsDesign">
+                 <i class="fa-solid fa-paintbrush me-2 " style="color:#2f5f7a;"></i> Graphics Design
+             </a>
+         </li>
 
-        <li>
-            <a class="dropdown-item d-flex align-items-center" href="/Service/AppDevelopment">
-                <i class="fa-solid fa-mobile-screen-button me-2 " style="color:#2f5f7a;"></i> App Development
-            </a>
-        </li>
+         <li>
+             <a class="dropdown-item d-flex align-items-center" href="/Service/AppDevelopment">
+                 <i class="fa-solid fa-mobile-screen-button me-2 " style="color:#2f5f7a;"></i> App Development
+             </a>
+         </li>
 
-        <li>
-            <a class="dropdown-item d-flex align-items-center" href="/Service/SocialMarketing">
-                <i class="fa-solid fa-bullhorn me-2 " style="color:#2f5f7a;"></i> Social Marketing
-            </a>
-        </li>
+         <li>
+             <a class="dropdown-item d-flex align-items-center" href="/Service/SocialMarketing">
+                 <i class="fa-solid fa-bullhorn me-2 " style="color:#2f5f7a;"></i> Social Marketing
+             </a>
+         </li>
 
-        <li>
-            <a class="dropdown-item d-flex align-items-center" href="/Service/ContentCreation">
-                <i class="fa-solid fa-pen-nib me-2 " style="color:#2f5f7a;"></i> Content Creation
-            </a>
-        </li>
+         <li>
+             <a class="dropdown-item d-flex align-items-center" href="/Service/ContentCreation">
+                 <i class="fa-solid fa-pen-nib me-2 " style="color:#2f5f7a;"></i> Content Creation
+             </a>
+         </li>
 
+     </ul>
+ </li>
+        <li><a href="@Url.Action("Portfolio", "Portfolio")"
+            class="@(ViewContext.RouteData.Values["Action"].ToString() == "Portfolio" ? "active" : "")">Portfolio</a></li>
+        
+        <li><a href="@Url.Action("Blog", "Blog")"
+            class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Blog" ? "active" : "")">Blog</a></li>
+        
+        <li><a href="@Url.Action("Contact", "Contact")"
+            class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Contact" ? "active" : "")">Contact</a></li>
     </ul>
-</li>
-                        <li><a href="@Url.Action("Portfolio", "Home")">Portfolio</a></li>
-                        <li><a href="@Url.Action("Team", "Home")">Team</a></li>
-                        <li><a href="@Url.Action("Pricing", "Home")">Pricing</a></li>
-                        <li><a href="@Url.Action("Blog", "Blog")">Blog</a></li>
-                        <li><a href="@Url.Action("Contact", "Contact")">Contact</a></li>
-                    </ul>
-                    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-                </nav>
+    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+</nav>
             </div>
         </div>
 
@@ -154,10 +159,11 @@
                         <span class="sitename">Technomate</span>
                     </a>
                     <div class="footer-contact pt-3">
-                        <p>A108 Adam Street</p>
-                        <p>New York, NY 535022</p>
-                        <p><strong>Phone:</strong> +1 5589 55488 55</p>
-                        <p><strong>Email:</strong> info@example.com</p>
+                        <p>310, Hilltown Landmark</p>
+                        <p>Nikol, Ahmedabad</p>
+                        <p>Gujarat, India</p>
+                        <p><strong>Phone:</strong> +91 9558887181</p>
+                        <p><strong>Email:</strong> hr@technomateit.com</p>
                     </div>
                 </div>
 
@@ -165,8 +171,8 @@
                     <h4>Useful Links</h4>
                     <ul>
                         <li><i class="bi bi-chevron-right"></i> <a href="@Url.Action("Index", "Home")">Home</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="@Url.Action("About", "Home")">About</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="@Url.Action("Services", "Home")">Services</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="@Url.Action("Aboutus", "Aboutus")">About</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="@Url.Action("Services", "Service")">Services</a></li>
                     </ul>
                 </div>
 
