@@ -1,0 +1,80 @@
+﻿@model Technomate.Models.BlogDetailsViewModel
+@{
+    ViewData["Title"] = Model.Blog.Title;
+}
+
+<div class="page-title" data-aos="fade">
+    <div class="container">
+        <nav class="breadcrumbs">
+            <ol>
+                <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                <li><a href="@Url.Action("Blog", "Blog")">Blog</a></li>
+                <li class="current">@Model.Blog.Title</li>
+            </ol>
+        </nav>
+        <h1>@Model.Blog.Title</h1>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row">
+
+        <!-- Main Blog -->
+        <div class="col-lg-8">
+            <article class="blog-single-card shadow-sm rounded p-4 mb-5">
+                <img src="~/@Model.Blog.ImageUrl" class="img-fluid rounded mb-4" alt="@Model.Blog.Title">
+                <p class="text-muted mb-2">
+                    <b>
+                    <i class="bi bi-person"></i> @Model.Blog.Author &nbsp; | &nbsp;
+                    <i class="bi bi-clock"></i> @Model.Blog.PublishedDate.ToString("MMM dd, yyyy") &nbsp; | &nbsp;
+                    <i class="bi bi-folder"></i> @Model.Blog.Category
+                    </b>
+                </p>
+                <div class="mb-3">
+                    @Html.Raw(Model.Blog.Content)
+                </div>
+                <div>
+                    @foreach (var tag in Model.Blog.Tags.Split(','))
+                    {
+                        <span class="badge bg-secondary me-1">@tag.Trim()</span>
+                    }
+                </div>
+            </article>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+            <div class="sidebar">
+
+                <!-- Recent Posts -->
+                <div class="mb-4">
+                    <h5 class="mb-3">Recent Posts</h5>
+                    @foreach (var post in Model.RecentPosts)
+                    {
+                        <div class="d-flex mb-3">
+                            <img src="~/@post.ImageUrl" alt="@post.Title" class="img-fluid me-3" style="width:70px; height:70px; object-fit:cover; border-radius:5px;">
+                            <div>
+                                <a href="@Url.Action("BlogDetails", "Blog", new { slug = post.Slug })">@post.Title</a>
+                                <br />
+                                <small class="text-muted">@post.PublishedDate.ToString("MMM dd, yyyy")</small>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <!-- Categories -->
+                <div class="mb-4">
+                    <h5 class="mb-3">Categories</h5>
+                    <ul class="list-group">
+                        @foreach (var cat in Model.Categories)
+                        {
+                            <li class="list-group-item border-0 p-1"><a href="#">@cat</a></li>
+                        }
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
