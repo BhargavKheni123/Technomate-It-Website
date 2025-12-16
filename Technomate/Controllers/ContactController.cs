@@ -1,21 +1,27 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Technomate.Models;
+using Technomate.Repositories;
 
 namespace Technomate.Controllers
 {
     public class ContactController : Controller
     {
         private readonly IContactRepository _contactRepo;
+        private readonly ISettingRepository _settingRepo;
 
-        public ContactController(IContactRepository contactRepo)
+        public ContactController(IContactRepository contactRepo, ISettingRepository settingRepo)
         {
             _contactRepo = contactRepo;
+            _settingRepo = settingRepo;
         }
 
         public IActionResult Contact()
         {
+            var setting = _settingRepo.GetSetting();
+            ViewBag.Setting = setting;
             return View();
         }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]

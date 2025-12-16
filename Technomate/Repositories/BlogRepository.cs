@@ -43,5 +43,11 @@ public class BlogRepository : IBlogRepository
             .Distinct()
             .ToListAsync();
     }
+    public async Task AddBlogAsync(Blog blog)
+    {
+        _context.Blogs.Add(blog);
+        await _context.SaveChangesAsync();
+    }
+
 
 }

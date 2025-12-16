@@ -55,18 +55,15 @@
                         <img src="~/img/about.jpg" class="img-fluid" alt="Technomates Team">
                     </div>
                     <div class="col-lg-6 order-2 order-lg-1 content">
-                        <h3>Empowering Technology Connections</h3>
-                        <p class="fst-italic">
-                            Technomates is a platform dedicated to connecting technology enthusiasts, innovators, and solutions seamlessly across the globe.
-                        </p>
+                        <h3>@Model.AboutTitle</h3>
+
+                        <p class="fst-italic">@Model.AboutShortDescription</p>
                         <ul>
-                            <li><i class="bi bi-check2-all"></i> <span>Collaborate with like-minded tech professionals and communities.</span></li>
-                            <li><i class="bi bi-check2-all"></i> <span>Access innovative solutions tailored to your technology needs.</span></li>
-                            <li><i class="bi bi-check2-all"></i> <span>Stay updated with the latest trends and projects in technology and software development.</span></li>
+                            <li><i class="bi bi-check2-all"></i> <span> @Model.Point1</span></li>
+                            <li><i class="bi bi-check2-all"></i> <span> @Model.Point2</span></li>
+                            <li><i class="bi bi-check2-all"></i> <span> @Model.Point3</span></li>
                         </ul>
-                        <p>
-                            Our mission is to empower individuals and businesses to leverage technology efficiently. Technomates provides guidance, tools, and support for innovative projects, making technology accessible for everyone.
-                        </p>
+                        <p>@Model.AboutFullDescription</p>
                     </div>
                 </div>
 

@@ -1,0 +1,115 @@
+﻿@* @{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+    ViewBag.Title = "Admin Dashboard (Dummy)";
+}
+
+<div class="row">
+    <div class="col-lg-3 col-6">
+        <div class="small-box text-bg-primary">
+            <div class="inner">
+                <h3>150</h3>
+                <p>New Orders</p>
+            </div>
+            <svg class="small-box-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"></path>
+            </svg>
+            <a href="#" class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover">
+                More info <i class="bi bi-link-45deg"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card card-info">
+            <div class="card-header">
+                <h3 class="card-title">Technomates Custom Area</h3>
+            </div>
+            <div class="card-body">
+                <p>custom current</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+} *@
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dummy Page</title>
+    <style>
+        /* Reset & font */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f6f8;
+        }
+
+        /* Center container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* Heading */
+        h1 {
+            color: #2f5f7a;
+            margin-bottom: 50px;
+        }
+
+        /* Buttons container */
+        .button-group {
+            display: flex;
+            gap: 30px;
+        }
+
+        /* Buttons */
+        .btn {
+            background-color: #2f5f7a;
+            color: #fff;
+            border: none;
+            padding: 20px 40px;
+            font-size: 18px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+            .btn:hover {
+                background-color: #1e3d55;
+                transform: translateY(-5px);
+                box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Choose a Form</h1>
+        <div class="button-group">
+            <button class="btn" onclick="location.href='/Blog/Create'">Blog Form</button>
+            <button class="btn" onclick="location.href='/Portfolio/Create'">Portfolio Form</button>
+            <button class="btn" onclick="location.href='/Setting/Create'">Setting Form</button>
+        </div>
+    </div>
+
+</body>
+</html>

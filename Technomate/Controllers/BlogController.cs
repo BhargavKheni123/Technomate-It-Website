@@ -64,4 +64,46 @@ public class BlogController : Controller
 
         return View(detailsModel);
     }
+
+    // GET: /Blog/Create
+    public IActionResult Create()
+    {
+        return View();
+    }
+
+    // POST: /Blog/Create
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Create(Blog blog, IFormFile ImageFile)
+    {
+        if (ModelState.IsValid)
+        {
+            // Handle image upload
+            if (ImageFile != null && ImageFile.Length > 0)
+            {
+                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
+                if (!Directory.Exists(uploadsFolder))
+                    Directory.CreateDirectory(uploadsFolder);
+
+                var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(ImageFile.FileName);
+                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await ImageFile.CopyToAsync(fileStream);
+                }
+
+                // Save relative path in database
+                blog.ImageUrl = "uploads/" + uniqueFileName;
+            }
+
+            blog.PublishedDate = DateTime.Now;
+            await _repo.AddBlogAsync(blog);
+
+            return RedirectToAction("Blog"); // redirect to blog list
+        }
+
+        return View(blog);
+    }
+
 }

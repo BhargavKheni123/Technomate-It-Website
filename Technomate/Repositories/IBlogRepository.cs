@@ -9,6 +9,8 @@ namespace Technomate.Repositories
         Task<Blog> GetBlogBySlugAsync(string slug);
         Task<List<Blog>> GetRecentBlogsAsync(int count);
         Task<List<string>> GetCategoriesAsync();
+        Task AddBlogAsync(Blog blog);
+
     }
 
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using TechnoMate.Models;
 
 namespace Technomate.Models
 {
@@ -12,6 +13,9 @@ namespace Technomate.Models
         public DbSet<ContactMessage> ContactMessages { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Portfolio> Portfolios { get; set; }
+        public DbSet<Setting> Setting { get; set; }
+
+        public DbSet<Admin> Admin { get; set; }
 
 
     }
