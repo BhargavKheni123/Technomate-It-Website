@@ -78,7 +78,7 @@
                                                         <li class="list-inline-item"><i class="bi bi-chat-dots"></i> @blog.CommentsCount Comments</li>
                                                     </ul>
                                                 </div>
-                                                <p class="flex-grow-1">@blog.Summary</p>
+                                                <p class="flex-grow-1">@Html.Raw(blog.Summary)</p>
                                                 <div class="read-more mt-auto">
                                                     <div class="read-more mt-auto">
                                                         <a href="@Url.Action("BlogDetails", "Blog", new { slug = blog.Slug })"
