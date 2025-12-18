@@ -13,22 +13,24 @@ namespace Technomate.Controllers
             _settingRepo = settingRepo;
         }
 
+        // GET: Load single record
         public IActionResult Edit()
         {
-            var obj = _settingRepo.GetSetting();
+            var obj = _settingRepo.GetSetting() ?? new Setting();
             return View(obj);
         }
 
+        // POST: Update existing record
         [HttpPost]
-        public IActionResult Edit(Setting setting)
+        public IActionResult Edit(Setting model)
         {
             if (ModelState.IsValid)
             {
-                _settingRepo.UpdateSetting(setting);
-                TempData["msg"] = "Setting updated successfully!";
+                _settingRepo.UpdateSetting(model);
+                TempData["msg"] = "Settings updated successfully!";
+                return RedirectToAction("Edit");
             }
-            return View(setting);
+            return View(model);
         }
     }
-
 }

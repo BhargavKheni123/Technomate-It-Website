@@ -2802,6 +2802,7 @@ wwwroot\uploads\253ebe61-802e-43ee-940f-3ae166a2e24e.png
 wwwroot\uploads\62509c0d-9bc4-4392-999d-733103f222a1.png
 wwwroot\uploads\7c49e698-f469-4457-a830-4f54a365797a.png
 wwwroot\uploads\f837024d-68cc-4327-a14f-be9a5a587c74.png
+wwwroot\uploads\portfolio\b7b79ec6-ff13-46fd-942f-fc709c77589c.png
 wwwroot\vendor\aos\aos.cjs.js
 wwwroot\vendor\aos\aos.css
 wwwroot\vendor\aos\aos.esm.js

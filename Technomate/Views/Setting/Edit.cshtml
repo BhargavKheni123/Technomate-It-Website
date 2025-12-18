@@ -1,0 +1,147 @@
+﻿@model Technomate.Models.Setting
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Edit Settings";
+}
+
+<style>
+    body {
+        background-color: #f4f6f8;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .card {
+        border-radius: 15px;
+        overflow: hidden;
+        border: none;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-header {
+        background-color: #2f5f7a;
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.3rem;
+    }
+
+    .form-label {
+        font-weight: 500;
+        color: #2f5f7a;
+    }
+
+    .form-control {
+        border-radius: 10px;
+        padding: 10px 15px;
+        border: 1px solid #ccc;
+        transition: all 0.3s ease;
+    }
+
+        .form-control:focus {
+            border-color: #2f5f7a;
+            box-shadow: 0 0 5px rgba(47, 95, 122, 0.5);
+            outline: none;
+        }
+
+    button.btn-primary {
+        background-color: #2f5f7a;
+        border: none;
+        border-radius: 12px;
+        padding: 12px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+        button.btn-primary:hover {
+            background-color: #1e3d55;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+    .container {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .mb-3 {
+        margin-bottom: 25px;
+    }
+</style>
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm">
+                <div class="card-header">
+                    <h4 class="mb-0">Edit Site Settings</h4>
+                </div>
+                <div class="card-body p-4">
+
+                    @if (TempData["msg"] != null)
+                    {
+                        <div class="alert alert-success">@TempData["msg"]</div>
+                    }
+
+                    <form asp-action="Edit" method="post">
+
+                        <div class="mb-3">
+                            <label asp-for="Email" class="form-label"></label>
+                            <input asp-for="Email" class="form-control" placeholder="@Model.Email" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Phone" class="form-label"></label>
+                            <input asp-for="Phone" class="form-control" placeholder="@Model.Phone" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Website" class="form-label"></label>
+                            <input asp-for="Website" class="form-control" placeholder="@Model.Website" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Address" class="form-label"></label>
+                            <textarea asp-for="Address" class="form-control" placeholder="@Model.Address"></textarea>
+                        </div>
+
+                        <hr />
+
+                        <div class="mb-3">
+                            <label asp-for="AboutTitle" class="form-label"></label>
+                            <input asp-for="AboutTitle" class="form-control" placeholder="@Model.AboutTitle" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="AboutShortDescription" class="form-label"></label>
+                            <textarea asp-for="AboutShortDescription" class="form-control" placeholder="@Model.AboutShortDescription"></textarea>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <label asp-for="Point1" class="form-label"></label>
+                                <input asp-for="Point1" class="form-control" placeholder="@Model.Point1" />
+                            </div>
+                            <div class="col-md-4">
+                                <label asp-for="Point2" class="form-label"></label>
+                                <input asp-for="Point2" class="form-control" placeholder="@Model.Point2" />
+                            </div>
+                            <div class="col-md-4">
+                                <label asp-for="Point3" class="form-label"></label>
+                                <input asp-for="Point3" class="form-control" placeholder="@Model.Point3" />
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="AboutFullDescription" class="form-label"></label>
+                            <textarea asp-for="AboutFullDescription" class="form-control" rows="6" placeholder="@Model.AboutFullDescription"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">Save Changes</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

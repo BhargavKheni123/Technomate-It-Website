@@ -26,6 +26,37 @@ namespace Technomate.Controllers
             return View(item);
         }
 
+        // ADMIN CREATE - GET
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        // ADMIN CREATE - POST
+        [HttpPost]
+        public IActionResult Create(Portfolio model)
+        {
+            if (model.ImageFile != null && model.ImageFile.Length > 0)
+            {
+                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/portfolio");
+                if (!Directory.Exists(uploadsFolder))
+                    Directory.CreateDirectory(uploadsFolder);
+
+                var fileName = Guid.NewGuid() + Path.GetExtension(model.ImageFile.FileName);
+                var filePath = Path.Combine(uploadsFolder, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    model.ImageFile.CopyTo(stream);
+                }
+
+                model.ImageUrl = "/uploads/portfolio/" + fileName;
+            }
+
+            _repo.Add(model);
+            return RedirectToAction("Portfolio");
+        }
+
 
     }
 }

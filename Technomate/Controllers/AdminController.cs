@@ -38,7 +38,7 @@ namespace TechnoMate.Controllers
             // Set session
             HttpContext.Session.SetString("AdminUser", admin.Username);
 
-            return RedirectToAction("DummyPage");
+            return RedirectToAction("Create", "Blog");
         }
 
         [HttpGet]
