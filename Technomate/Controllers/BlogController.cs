@@ -75,7 +75,7 @@ public class BlogController : Controller
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(Blog blog, IFormFile ImageFile)
-    {
+    {                                                                                                                                                                                                
         if (ModelState.IsValid)
         {
             // Handle image upload

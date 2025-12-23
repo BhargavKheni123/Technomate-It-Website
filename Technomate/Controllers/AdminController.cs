@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Technomate.Models;
 using TechnoMate.Repositories;
-using Microsoft.AspNetCore.Http;
 
 namespace TechnoMate.Controllers
 {
@@ -58,6 +59,43 @@ namespace TechnoMate.Controllers
         {
             HttpContext.Session.Clear();
             return RedirectToAction("Login");
+        }
+
+        public IActionResult CompanyMaster()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CompanyMaster(CompanyMaster model)
+        {
+            if (model.WebsiteImageFile != null)
+            {
+                string fileName = Guid.NewGuid().ToString()
+                                + Path.GetExtension(model.WebsiteImageFile.FileName);
+
+                string folderPath = Path.Combine(
+                    Directory.GetCurrentDirectory(),
+                    "wwwroot/WebsiteImages"
+                );
+
+                if (!Directory.Exists(folderPath))
+                {
+                    Directory.CreateDirectory(folderPath);
+                }
+
+                string filePath = Path.Combine(folderPath, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    model.WebsiteImageFile.CopyTo(stream);
+                }
+
+                model.WebsiteImage = "/WebsiteImages/" + fileName;
+            }
+
+            _repo.AddCompany(model);
+            return RedirectToAction("CompanyMaster");
         }
     }
 }

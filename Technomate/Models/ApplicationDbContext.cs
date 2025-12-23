@@ -16,6 +16,9 @@ namespace Technomate.Models
         public DbSet<Setting> Setting { get; set; }
 
         public DbSet<Admin> Admin { get; set; }
+        public DbSet<CompanyMaster> CompanyMaster { get; set; }
+
+
 
 
     }

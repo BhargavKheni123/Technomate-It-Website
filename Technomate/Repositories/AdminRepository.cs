@@ -17,6 +17,11 @@ namespace TechnoMate.Repositories
             return _context.Admin
                 .FirstOrDefault(x => x.Username == username && x.PasswordHash == password);
         }
+        public void AddCompany(CompanyMaster company)
+        {
+            _context.CompanyMaster.Add(company);
+            _context.SaveChanges();
+        }
     }
 
 }

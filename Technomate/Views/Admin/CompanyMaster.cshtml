@@ -1,0 +1,101 @@
+﻿@model Technomate.Models.CompanyMaster
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+
+    <!-- Page Header -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Company Master</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Company Master Form</h3>
+                </div>
+
+                <!-- IMPORTANT -->
+                <form asp-action="CompanyMaster"
+                      asp-controller="Admin"
+                      method="post"
+                      enctype="multipart/form-data">
+
+                    <div class="card-body">
+
+                        <div class="form-group">
+                            <label>User Name</label>
+                            <input asp-for="UserName" class="form-control" />
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input asp-for="Password" type="password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Company Name</label>
+                            <input asp-for="CompanyName" class="form-control" />
+                            <span asp-validation-for="CompanyName" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group form-check">
+                            <input asp-for="IsAdmin" class="form-check-input" />
+                            <label class="form-check-label">Is Admin</label>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Website URL</label>
+                            <input asp-for="WebsiteUrl" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Website Name</label>
+                            <input asp-for="WebsiteName" class="form-control" />
+                        </div>
+
+                        <!-- IMAGE UPLOAD (MOST IMPORTANT PART) -->
+                        <div class="form-group">
+                            <label>Website Logo</label>
+                            <input asp-for="WebsiteImageFile"
+                                   type="file"
+                                   class="form-control"
+                                   accept="image/*" />
+                        </div>
+
+                        <div class="form-group form-check">
+                            <input asp-for="IsSuperAdmin" class="form-check-input" />
+                            <label class="form-check-label">Is Super Admin</label>
+                        </div>
+
+                    </div>
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
