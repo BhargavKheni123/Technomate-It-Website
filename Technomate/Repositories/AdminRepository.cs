@@ -1,4 +1,5 @@
-﻿using Technomate.Models;
+﻿using Microsoft.AspNetCore.Http.HttpResults;
+using Technomate.Models;
 using TechnoMate.Models;
 
 namespace TechnoMate.Repositories
@@ -22,6 +23,22 @@ namespace TechnoMate.Repositories
             _context.CompanyMaster.Add(company);
             _context.SaveChanges();
         }
+
+        public void AddAdminFromCompany(CompanyMaster company)
+        {
+            Admin admin = new Admin
+            {
+                Username = company.UserName,
+                PasswordHash = company.Password,
+                FullName = company.CompanyName,
+                CompanyId = company.CompanyId,
+                CreatedAt = DateTime.Now
+            };
+
+            _context.Admin.Add(admin);
+            _context.SaveChanges();
+        }
+
     }
 
 }

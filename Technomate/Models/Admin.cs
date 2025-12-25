@@ -14,5 +14,9 @@ namespace TechnoMate.Models
         public string PasswordHash { get; set; } // plain password for now
 
         public string FullName { get; set; }
+        public DateTime CreatedAt { get; set; }   
+
+        public int CompanyId { get; set; }   
+
     }
 }

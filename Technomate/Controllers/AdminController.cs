@@ -69,6 +69,12 @@ namespace TechnoMate.Controllers
         [HttpPost]
         public IActionResult CompanyMaster(CompanyMaster model)
         {
+            if (model.IsAdmin == model.IsSuperAdmin)
+            {
+                ModelState.AddModelError("", "Please select either Admin or Super Admin.");
+                return View(model);
+            }
+
             if (model.WebsiteImageFile != null)
             {
                 string fileName = Guid.NewGuid().ToString()
@@ -95,7 +101,11 @@ namespace TechnoMate.Controllers
             }
 
             _repo.AddCompany(model);
+
+            _repo.AddAdminFromCompany(model);
+
             return RedirectToAction("CompanyMaster");
         }
+
     }
 }
