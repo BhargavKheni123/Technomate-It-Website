@@ -39,6 +39,12 @@ namespace TechnoMate.Repositories
             _context.SaveChanges();
         }
 
+        public CompanyMaster GetCompanyById(int companyId)
+        {
+            return _context.CompanyMaster
+                .FirstOrDefault(x => x.CompanyId == companyId);
+        }
+
     }
 
 }

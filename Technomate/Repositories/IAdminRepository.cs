@@ -8,6 +8,8 @@ namespace TechnoMate.Repositories
         Admin Login(string username, string password);
         void AddCompany(CompanyMaster company);
         void AddAdminFromCompany(CompanyMaster company);
+        CompanyMaster GetCompanyById(int companyId);
+
 
     }
 

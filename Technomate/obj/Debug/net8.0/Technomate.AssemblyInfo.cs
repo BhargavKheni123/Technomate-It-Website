@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Technomate")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+837f2f68a9ae9320c7cb9ff5691d26c0064c9973")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52783c140bbad11f820b46c45fcaa254a889cdff")]
 [assembly: System.Reflection.AssemblyProductAttribute("Technomate")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Technomate")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

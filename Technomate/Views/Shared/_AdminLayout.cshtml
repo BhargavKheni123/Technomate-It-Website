@@ -5,6 +5,10 @@
         var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
         var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
     }
+    @{
+        var fullName = Context.Session.GetString("FullName");
+        var role = Context.Session.GetString("Role");
+    }
 
 <head>
     <meta charset="utf-8" />
@@ -16,7 +20,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Dashboard</title>
+    <title>Teachnomate | Dashboard</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css">
@@ -51,17 +55,15 @@
         </nav>
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <a href="index3.html" class="brand-link">
-                <img src="~/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">AdminLTE 3</span>
+                <span class="brand-text font-weight-light"> Technomate </span>
             </a>
 
             <div class="sidebar">
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                    <div class="image">
-                        <img src="~/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-                    </div>
                     <div class="info">
-                        <a href="#" class="d-block">Alexander Pierce</a>
+                        <a href="#" class="d-block">
+                            @fullName (@role)
+                        </a>
                     </div>
                 </div>
 
@@ -78,6 +80,7 @@
 
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        
                         <li class="nav-item menu-open">
                             <a href="#"
                                class="nav-link">
@@ -109,13 +112,16 @@
                                         <p>Create Setting</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="/Admin/CompanyMaster"
-                                       class="nav-link @(currentController == "Admin" && currentAction == "CompanyMaster" ? "active" : "")">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Company Master</p>
-                                    </a>
-                                </li>
+                                @if (role == "SuperAdmin")
+                                {
+                                    <li class="nav-item">
+                                        <a href="/Admin/CompanyMaster"
+                                           class="nav-link @(currentController == "Admin" && currentAction == "CompanyMaster" ? "active" : "")">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Company Master</p>
+                                        </a>
+                                    </li>
+                                }
                             </ul>
                         </li>
                     </ul>

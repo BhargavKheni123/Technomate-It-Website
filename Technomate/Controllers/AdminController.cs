@@ -36,11 +36,25 @@ namespace TechnoMate.Controllers
                 return View();
             }
 
-            // Set session
+            // 🔹 Company fetch using CompanyId
+            var company = _repo.GetCompanyById(admin.CompanyId);
+
+            // 🔹 Sessions
             HttpContext.Session.SetString("AdminUser", admin.Username);
+            HttpContext.Session.SetString("FullName", admin.Username); // Vishva
+            HttpContext.Session.SetInt32("CompanyId", admin.CompanyId);
+
+            if (company != null)
+            {
+                if (company.IsSuperAdmin)
+                    HttpContext.Session.SetString("Role", "SuperAdmin");
+                else
+                    HttpContext.Session.SetString("Role", "Admin");
+            }
 
             return RedirectToAction("Create", "Blog");
         }
+
 
         [HttpGet]
         public IActionResult DummyPage()
