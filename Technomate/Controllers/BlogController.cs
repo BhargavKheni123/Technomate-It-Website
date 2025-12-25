@@ -12,15 +12,18 @@ public class BlogController : Controller
 
     public async Task<IActionResult> Blog(int page = 1)
     {
+        int companyId = HttpContext.Session.GetInt32("CompanyId") ?? 0;
+        if (companyId == 0)
+            return RedirectToAction("Login", "Account");
+
         int pageSize = 10;
 
-        var allBlogs = await _repo.GetAllBlogsAsync();
-        int totalBlogs = allBlogs.Count;
+        var allBlogs = await _repo.GetBlogsByCompanyAsync(companyId);
 
+        int totalBlogs = allBlogs.Count;
         int totalPages = (int)Math.Ceiling((double)totalBlogs / pageSize);
 
         var blogs = allBlogs
-            .OrderByDescending(b => b.Id)
             .Skip((page - 1) * pageSize)
             .Take(pageSize)
             .ToList();
@@ -33,13 +36,13 @@ public class BlogController : Controller
             Blogs = blogs,
             RecentPosts = recentPosts,
             Categories = categories,
-
             CurrentPage = page,
             TotalPages = totalPages
         };
 
         return View(model);
     }
+
 
 
     public async Task<IActionResult> BlogDetails(string slug)
@@ -71,36 +74,38 @@ public class BlogController : Controller
         return View();
     }
 
-    // POST: /Blog/Create
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(Blog blog, IFormFile ImageFile)
-    {                                                                                                                                                                                                
+    {
         if (ModelState.IsValid)
         {
-            // Handle image upload
+            int companyId = HttpContext.Session.GetInt32("CompanyId") ?? 0;
+            if (companyId == 0)
+                return RedirectToAction("Login", "Account");
+
+            blog.CompanyId = companyId; // ✅ IMPORTANT
+
+            // Image upload (same as your code)
             if (ImageFile != null && ImageFile.Length > 0)
             {
                 var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
                 if (!Directory.Exists(uploadsFolder))
                     Directory.CreateDirectory(uploadsFolder);
 
-                var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(ImageFile.FileName);
+                var uniqueFileName = Guid.NewGuid() + Path.GetExtension(ImageFile.FileName);
                 var filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    await ImageFile.CopyToAsync(fileStream);
-                }
+                using var fileStream = new FileStream(filePath, FileMode.Create);
+                await ImageFile.CopyToAsync(fileStream);
 
-                // Save relative path in database
                 blog.ImageUrl = "uploads/" + uniqueFileName;
             }
 
             blog.PublishedDate = DateTime.Now;
-            await _repo.AddBlogAsync(blog);
 
-            return RedirectToAction("Blog"); // redirect to blog list
+            await _repo.AddBlogAsync(blog);
+            return RedirectToAction("Blog");
         }
 
         return View(blog);

@@ -7,6 +7,8 @@ namespace Technomate.Models   // ✅ This must match exactly
     public class Blog
     {
         public int Id { get; set; }
+        public int CompanyId { get; set; }
+
 
         [Required]
         public string Title { get; set; }

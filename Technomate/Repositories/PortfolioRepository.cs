@@ -44,7 +44,12 @@ namespace Technomate.Repository
                 _context.SaveChanges();
             }
         }
+        public List<Portfolio> GetByCompany(int companyId)
+        {
+            return _context.Portfolios
+                .Where(p => p.CompanyId == companyId)
+                .ToList();
+        }
 
-        
     }
 }

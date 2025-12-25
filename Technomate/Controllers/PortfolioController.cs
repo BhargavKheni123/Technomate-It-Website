@@ -15,7 +15,11 @@ namespace Technomate.Controllers
 
         public IActionResult Portfolio()
         {
-            var data = _repo.GetAll();
+            int companyId = HttpContext.Session.GetInt32("CompanyId") ?? 0;
+            if (companyId == 0)
+                return RedirectToAction("Login", "Account");
+
+            var data = _repo.GetByCompany(companyId);
             return View(data);
         }
 
@@ -32,23 +36,25 @@ namespace Technomate.Controllers
             return View();
         }
 
-        // ADMIN CREATE - POST
         [HttpPost]
         public IActionResult Create(Portfolio model)
         {
+            int companyId = HttpContext.Session.GetInt32("CompanyId") ?? 0;
+            if (companyId == 0)
+                return RedirectToAction("Login", "Account");
+
+            model.CompanyId = companyId; // ✅ KEY LINE
+
             if (model.ImageFile != null && model.ImageFile.Length > 0)
             {
                 var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/portfolio");
-                if (!Directory.Exists(uploadsFolder))
-                    Directory.CreateDirectory(uploadsFolder);
+                Directory.CreateDirectory(uploadsFolder);
 
                 var fileName = Guid.NewGuid() + Path.GetExtension(model.ImageFile.FileName);
                 var filePath = Path.Combine(uploadsFolder, fileName);
 
-                using (var stream = new FileStream(filePath, FileMode.Create))
-                {
-                    model.ImageFile.CopyTo(stream);
-                }
+                using var stream = new FileStream(filePath, FileMode.Create);
+                model.ImageFile.CopyTo(stream);
 
                 model.ImageUrl = "/uploads/portfolio/" + fileName;
             }
@@ -56,7 +62,6 @@ namespace Technomate.Controllers
             _repo.Add(model);
             return RedirectToAction("Portfolio");
         }
-
 
     }
 }

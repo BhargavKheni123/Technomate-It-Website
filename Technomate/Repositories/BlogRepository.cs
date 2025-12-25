@@ -49,5 +49,11 @@ public class BlogRepository : IBlogRepository
         await _context.SaveChangesAsync();
     }
 
+    public async Task<List<Blog>> GetBlogsByCompanyAsync(int companyId)
+    {
+        return await _context.Blogs
+            .Where(b => b.CompanyId == companyId)
+            .ToListAsync();
+    }
 
 }
