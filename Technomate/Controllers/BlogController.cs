@@ -4,10 +4,14 @@ using Technomate.Repositories;
 public class BlogController : Controller
 {
     private readonly IBlogRepository _repo;
+    private readonly ICompanyRepository _companyRepo;
 
-    public BlogController(IBlogRepository repo)
+    public BlogController(
+        IBlogRepository repo,
+        ICompanyRepository companyRepo)
     {
         _repo = repo;
+        _companyRepo = companyRepo;
     }
 
     public async Task<IActionResult> Blog(int page = 1)
@@ -68,47 +72,67 @@ public class BlogController : Controller
         return View(detailsModel);
     }
 
-    // GET: /Blog/Create
     public IActionResult Create()
     {
-        return View();
+        bool isSuperAdmin = HttpContext.Session.GetString("Role") == "SuperAdmin";
+
+        var vm = new BlogCreateViewModel
+        {
+            Blog = new Blog(),
+            IsSuperAdmin = isSuperAdmin
+        };
+
+        if (isSuperAdmin)
+        {
+            vm.Companies = _companyRepo.GetAllCompanies(); // fetch all companies
+        }
+
+        return View(vm);
     }
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create(Blog blog, IFormFile ImageFile)
+    public async Task<IActionResult> Create(BlogCreateViewModel vm, IFormFile ImageFile)
     {
-        if (ModelState.IsValid)
+        // SuperAdmin must select a company
+        if (vm.IsSuperAdmin && vm.SelectedCompanyId == 0)
         {
-            int companyId = HttpContext.Session.GetInt32("CompanyId") ?? 0;
-            if (companyId == 0)
-                return RedirectToAction("Login", "Account");
-
-            blog.CompanyId = companyId; // ✅ IMPORTANT
-
-            // Image upload (same as your code)
-            if (ImageFile != null && ImageFile.Length > 0)
-            {
-                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
-                if (!Directory.Exists(uploadsFolder))
-                    Directory.CreateDirectory(uploadsFolder);
-
-                var uniqueFileName = Guid.NewGuid() + Path.GetExtension(ImageFile.FileName);
-                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
-
-                using var fileStream = new FileStream(filePath, FileMode.Create);
-                await ImageFile.CopyToAsync(fileStream);
-
-                blog.ImageUrl = "uploads/" + uniqueFileName;
-            }
-
-            blog.PublishedDate = DateTime.Now;
-
-            await _repo.AddBlogAsync(blog);
-            return RedirectToAction("Blog");
+            ModelState.AddModelError("", "Please select a company");
+            vm.Companies = _companyRepo.GetAllCompanies();
+            return View(vm);
         }
 
-        return View(blog);
+        int companyId = vm.IsSuperAdmin
+                        ? vm.SelectedCompanyId
+                        : HttpContext.Session.GetInt32("CompanyId") ?? 0;
+
+        if (companyId == 0)
+        {
+            return RedirectToAction("Login", "Account");
+        }
+
+        var blog = vm.Blog;
+        blog.CompanyId = companyId; // ✅ This ensures correct company
+        blog.PublishedDate = DateTime.Now;
+
+        // Image upload logic
+        if (ImageFile != null && ImageFile.Length > 0)
+        {
+            var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
+            if (!Directory.Exists(uploadsFolder))
+                Directory.CreateDirectory(uploadsFolder);
+
+            var uniqueFileName = Guid.NewGuid() + Path.GetExtension(ImageFile.FileName);
+            var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+            using var fileStream = new FileStream(filePath, FileMode.Create);
+            await ImageFile.CopyToAsync(fileStream);
+
+            blog.ImageUrl = "uploads/" + uniqueFileName;
+        }
+
+        await _repo.AddBlogAsync(blog);
+        return RedirectToAction("Blog");
     }
 
 }
