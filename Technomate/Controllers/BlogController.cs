@@ -94,15 +94,17 @@ public class BlogController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(BlogCreateViewModel vm, IFormFile ImageFile)
     {
-        // SuperAdmin must select a company
-        if (vm.IsSuperAdmin && vm.SelectedCompanyId == 0)
+        bool isSuperAdmin = HttpContext.Session.GetString("Role") == "SuperAdmin";
+
+        if (isSuperAdmin && vm.SelectedCompanyId == 0)
         {
             ModelState.AddModelError("", "Please select a company");
+            vm.IsSuperAdmin = true;
             vm.Companies = _companyRepo.GetAllCompanies();
             return View(vm);
         }
 
-        int companyId = vm.IsSuperAdmin
+        int companyId = isSuperAdmin
                         ? vm.SelectedCompanyId
                         : HttpContext.Session.GetInt32("CompanyId") ?? 0;
 
@@ -112,21 +114,19 @@ public class BlogController : Controller
         }
 
         var blog = vm.Blog;
-        blog.CompanyId = companyId; // ✅ This ensures correct company
+        blog.CompanyId = companyId;
         blog.PublishedDate = DateTime.Now;
 
-        // Image upload logic
         if (ImageFile != null && ImageFile.Length > 0)
         {
             var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
-            if (!Directory.Exists(uploadsFolder))
-                Directory.CreateDirectory(uploadsFolder);
+            Directory.CreateDirectory(uploadsFolder);
 
             var uniqueFileName = Guid.NewGuid() + Path.GetExtension(ImageFile.FileName);
             var filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
-            using var fileStream = new FileStream(filePath, FileMode.Create);
-            await ImageFile.CopyToAsync(fileStream);
+            using var stream = new FileStream(filePath, FileMode.Create);
+            await ImageFile.CopyToAsync(stream);
 
             blog.ImageUrl = "uploads/" + uniqueFileName;
         }
@@ -134,5 +134,6 @@ public class BlogController : Controller
         await _repo.AddBlogAsync(blog);
         return RedirectToAction("Blog");
     }
+
 
 }
