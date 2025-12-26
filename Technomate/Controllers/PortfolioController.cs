@@ -30,7 +30,6 @@ namespace Technomate.Controllers
             return View(item);
         }
 
-        // ADMIN CREATE - GET
         public IActionResult Create()
         {
             return View();
