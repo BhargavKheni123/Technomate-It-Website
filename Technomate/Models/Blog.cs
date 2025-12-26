@@ -35,6 +35,18 @@ namespace Technomate.Models   // ✅ This must match exactly
         public int CommentsCount { get; set; } = 0;
 
         [NotMapped]
-        public string Summary => Content.Length > 200 ? Content.Substring(0, 200) + "..." : Content;
+        public string Summary
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Content))
+                    return string.Empty;
+
+                return Content.Length > 200
+                    ? Content.Substring(0, 200) + "..."
+                    : Content;
+            }
+        }
+
     }
 }
