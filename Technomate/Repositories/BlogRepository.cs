@@ -55,5 +55,12 @@ public class BlogRepository : IBlogRepository
             .Where(b => b.CompanyId == companyId)
             .ToListAsync();
     }
+    public List<Blog> GetAll(int companyId)
+    {
+        return _context.Blogs
+            .Where(x => x.CompanyId == companyId)
+            .ToList();
+    }
+
 
 }
