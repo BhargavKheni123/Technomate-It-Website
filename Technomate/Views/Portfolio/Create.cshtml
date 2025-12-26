@@ -76,6 +76,23 @@
                 <div class="card-header">
                     <h4 class="mb-0">Create New Portfolio</h4>
                 </div>
+                @if (ViewBag.IsSuperAdmin)
+                {
+                    <div class="mb-3">
+                        <label class="form-label">Select Company</label>
+                        <select asp-for="CompanyId" class="form-control">
+                            <option value="">-- Select Company --</option>
+
+                            @foreach (var company in ViewBag.Companies)
+                            {
+                                <option value="@company.CompanyId">
+                                    @company.CompanyName
+                                </option>
+                            }
+                        </select>
+                    </div>
+                }
+
                 <div class="card-body p-4">
                     <form asp-action="Create" method="post" enctype="multipart/form-data">
 
