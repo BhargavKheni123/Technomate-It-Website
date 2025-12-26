@@ -1,4 +1,5 @@
 ﻿using Technomate.Models;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace Technomate.Repositories
 {
@@ -16,6 +17,7 @@ namespace Technomate.Repositories
             return _context.CompanyMaster
                            .OrderBy(c => c.CompanyName)
                            .ToList();
+            return _context.CompanyMaster.ToList();
         }
     }
 
