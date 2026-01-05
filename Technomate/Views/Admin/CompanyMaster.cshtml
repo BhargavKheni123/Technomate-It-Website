@@ -1,121 +1,190 @@
 ﻿@model Technomate.Models.CompanyMaster
 @{
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Company Master";
 }
 
-<div class="content-wrapper">
+<style>
+    body {
+        background-color: #f4f6f8;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-    <!-- Page Header -->
-    <section class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1>Company Master</h1>
+    .tm-card {
+        border-radius: 16px;
+        border: none;
+        box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+        overflow: hidden;
+    }
+
+    .tm-header {
+        background: #2f5f7a;
+        color: #fff;
+        padding: 18px 25px;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    .tm-label {
+        font-weight: 500;
+        color: #2f5f7a;
+    }
+
+    .tm-input {
+        border-radius: 10px;
+        padding: 10px 14px;
+        border: 1px solid #ccc;
+        transition: 0.3s;
+    }
+
+        .tm-input:focus {
+            border-color: #2f5f7a;
+            box-shadow: 0 0 6px rgba(47,95,122,.45);
+            outline: none;
+        }
+
+    .tm-btn {
+        background: #2f5f7a;
+        border: none;
+        border-radius: 12px;
+        padding: 12px;
+        font-size: 1.05rem;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+        .tm-btn:hover {
+            background: #1e3d55;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0,0,0,.3);
+        }
+
+    .tm-check label {
+        margin-left: 6px;
+        font-weight: 500;
+        color: #2f5f7a;
+    }
+
+    .container {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+</style>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+            <!-- SUCCESS MESSAGE -->
+            @if (TempData["success"] != null)
+            {
+                <div class="alert alert-success alert-dismissible fade show">
+                    @TempData["success"]
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
                 </div>
-            </div>
-        </div>
-    </section>
+            }
 
-    <!-- Main content -->
-    <section class="content">
-        <div class="container-fluid">
-
-            <div class="card card-primary">
-                <div class="card-header">
-                    <h3 class="card-title">Company Master Form</h3>
+            <div class="tm-card">
+                <div class="tm-header">
+                    Company Master
                 </div>
 
-                <!-- IMPORTANT -->
-                <form asp-action="CompanyMaster"
-                      asp-controller="Admin"
-                      method="post"
-                      enctype="multipart/form-data">
+                <div class="card-body p-4">
 
-                    <div class="card-body">
+                    @if (TempData["success"] != null)
+                    {
+                        <div class="alert alert-success alert-dismissible fade show">
+                            @TempData["success"]
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        </div>
+                    }
 
-                        <div class="form-group">
-                            <label>User Name</label>
-                            <input asp-for="UserName" class="form-control" />
+                    <form asp-action="CompanyMaster"
+                          asp-controller="Admin"
+                          method="post"
+                          enctype="multipart/form-data">
+
+                        <div asp-validation-summary="ModelOnly"
+                             class="alert alert-danger"></div>
+
+                        <div class="mb-3">
+                            <label class="tm-label">User Name</label>
+                            <input asp-for="UserName" class="form-control tm-input" />
                             <span asp-validation-for="UserName" class="text-danger"></span>
                         </div>
 
-                        <div class="form-group">
-                            <label>Password</label>
-                            <input asp-for="Password" type="password" class="form-control" />
+                        <div class="mb-3">
+                            <label class="tm-label">Password</label>
+                            <input asp-for="Password"
+                                   type="password"
+                                   class="form-control tm-input" />
                             <span asp-validation-for="Password" class="text-danger"></span>
                         </div>
 
-                        <div class="form-group">
-                            <label>Company Name</label>
-                            <input asp-for="CompanyName" class="form-control" />
+                        <div class="mb-3">
+                            <label class="tm-label">Company Name</label>
+                            <input asp-for="CompanyName" class="form-control tm-input" />
                             <span asp-validation-for="CompanyName" class="text-danger"></span>
                         </div>
 
-                        <div class="form-group form-check">
-                            <input asp-for="IsAdmin" class="form-check-input" />
-                            <label class="form-check-label">Is Admin</label>
+                        <div class="row mb-3">
+                            <div class="col-md-6 tm-check">
+                                <input asp-for="IsAdmin" type="checkbox" />
+                                <label>Admin</label>
+                            </div>
+                            <div class="col-md-6 tm-check">
+                                <input asp-for="IsSuperAdmin" type="checkbox" />
+                                <label>Super Admin</label>
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label>Website URL</label>
-                            <input asp-for="WebsiteUrl" class="form-control" />
+                        <div class="mb-3">
+                            <label class="tm-label">Website URL</label>
+                            <input asp-for="WebsiteUrl"
+                                   class="form-control tm-input"
+                                   placeholder="https://example.com" />
+                            <span asp-validation-for="WebsiteUrl" class="text-danger"></span>
                         </div>
 
-                        <div class="form-group">
-                            <label>Website Name</label>
-                            <input asp-for="WebsiteName" class="form-control" />
+                        <div class="mb-3">
+                            <label class="tm-label">Website Name</label>
+                            <input asp-for="WebsiteName" class="form-control tm-input" />
                         </div>
 
-                        <!-- IMAGE UPLOAD (MOST IMPORTANT PART) -->
-                        <div class="form-group">
-                            <label>Website Logo</label>
+                        <div class="mb-4">
+                            <label class="tm-label">Website Logo</label>
                             <input asp-for="WebsiteImageFile"
                                    type="file"
-                                   class="form-control"
+                                   class="form-control tm-input"
                                    accept="image/*" />
                         </div>
 
-                        <div class="form-group form-check">
-                            <input asp-for="IsSuperAdmin" class="form-check-input" />
-                            <label class="form-check-label">Is Super Admin</label>
-                        </div>
+                        <button type="submit" class="btn tm-btn w-100">
+                            Save Company
+                        </button>
 
-                    </div>
-
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">Save</button>
-                    </div>
-                </form>
-
+                    </form>
+                </div>
             </div>
-
         </div>
-    </section>
-
+    </div>
 </div>
 
 @section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+    <partial name="_ValidationScriptsPartial" />
 }
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", () => {
+        const admin = document.getElementById("IsAdmin");
+        const superAdmin = document.getElementById("IsSuperAdmin");
 
-        const isAdmin = document.getElementById("IsAdmin");
-        const isSuperAdmin = document.getElementById("IsSuperAdmin");
-
-        isAdmin.addEventListener("change", function () {
-            if (this.checked) {
-                isSuperAdmin.checked = false;
-            }
+        admin.addEventListener("change", () => {
+            if (admin.checked) superAdmin.checked = false;
         });
 
-        isSuperAdmin.addEventListener("change", function () {
-            if (this.checked) {
-                isAdmin.checked = false;
-            }
+        superAdmin.addEventListener("change", () => {
+            if (superAdmin.checked) admin.checked = false;
         });
     });
 </script>

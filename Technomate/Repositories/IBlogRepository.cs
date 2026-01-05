@@ -11,7 +11,6 @@ namespace Technomate.Repositories
         Task<List<string>> GetCategoriesAsync();
         Task AddBlogAsync(Blog blog);
         Task<List<Blog>> GetBlogsByCompanyAsync(int companyId);
-        List<Blog> GetAll(int companyId);
 
     }
 

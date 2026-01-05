@@ -76,25 +76,26 @@
                 <div class="card-header">
                     <h4 class="mb-0">Create New Portfolio</h4>
                 </div>
-                @if (ViewBag.IsSuperAdmin)
-                {
-                    <div class="mb-3">
-                        <label class="form-label">Select Company</label>
-                        <select asp-for="CompanyId" class="form-control">
-                            <option value="">-- Select Company --</option>
-
-                            @foreach (var company in ViewBag.Companies)
-                            {
-                                <option value="@company.CompanyId">
-                                    @company.CompanyName
-                                </option>
-                            }
-                        </select>
-                    </div>
-                }
+               
 
                 <div class="card-body p-4">
                     <form asp-action="Create" method="post" enctype="multipart/form-data">
+
+                        @if (ViewBag.IsSuperAdmin)
+                        {
+                            <div class="mb-3">
+                                <label class="form-label">Select Company</label>
+                                <select asp-for="CompanyId" class="form-control" required>
+                                    <option value="">-- Select Company --</option>
+                                    @foreach (var company in ViewBag.Companies)
+                                    {
+                                        <option value="@company.CompanyId">
+                                            @company.CompanyName
+                                        </option>
+                                    }
+                                </select>
+                            </div>
+                        }
 
                         <div class="mb-3">
                             <label asp-for="Title" class="form-label"></label>
@@ -116,6 +117,13 @@
                         <div class="mb-3">
                             <label asp-for="ImageUrl" class="form-label"></label>
                             <input asp-for="ImageUrl" class="form-control" placeholder="Or enter image URL" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="DetailsUrl" class="form-label">Details URL</label>
+                            <input asp-for="DetailsUrl"
+                                   class="form-control"
+                                   placeholder="https://example.com/project-details" />
                         </div>
 
                         <div class="mb-3">

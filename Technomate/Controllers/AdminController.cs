@@ -119,6 +119,10 @@ namespace TechnoMate.Controllers
             _repo.AddAdminFromCompany(model);
 
             return RedirectToAction("CompanyMaster");
+
+            TempData["success"] = "Company saved successfully!";
+            return RedirectToAction("CompanyMaster");
+
         }
 
     }

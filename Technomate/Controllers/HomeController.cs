@@ -11,25 +11,27 @@ namespace Technomate.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IBlogRepository _blogRepo;
         private readonly IPortfolioRepository _portfolioRepo;
+        private readonly IConfiguration _config; 
 
-        // ✅ SINGLE constructor (CORRECT)
         public HomeController(
             ILogger<HomeController> logger,
             IBlogRepository blogRepo,
-            IPortfolioRepository portfolioRepo)
+            IPortfolioRepository portfolioRepo,
+            IConfiguration config)
         {
             _logger = logger;
             _blogRepo = blogRepo;
             _portfolioRepo = portfolioRepo;
+            _config = config;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             int companyId;
 
             if (HttpContext.Session.GetInt32("CompanyId") == null)
             {
-                companyId = 1; // Default company
+                companyId = _config.GetValue<int>("DefaultCompany:CompanyId");
                 HttpContext.Session.SetInt32("CompanyId", companyId);
             }
             else
@@ -37,8 +39,8 @@ namespace Technomate.Controllers
                 companyId = HttpContext.Session.GetInt32("CompanyId").Value;
             }
 
-            ViewBag.Blogs = _blogRepo.GetAll(companyId);
-            ViewBag.Portfolios = _portfolioRepo.GetAll(companyId);
+            ViewBag.Blogs = await _blogRepo.GetBlogsByCompanyAsync(companyId);
+            ViewBag.Portfolios = _portfolioRepo.GetByCompany(companyId);
 
             return View();
         }
