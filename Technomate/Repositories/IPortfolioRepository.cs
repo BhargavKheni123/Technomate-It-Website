@@ -11,6 +11,7 @@ namespace Technomate.Repository
         void Update(Portfolio portfolio);
         void Delete(int id);
         List<Portfolio> GetByCompany(int companyId);
+        List<Portfolio> GetAllPortfolios();
 
     }
 }

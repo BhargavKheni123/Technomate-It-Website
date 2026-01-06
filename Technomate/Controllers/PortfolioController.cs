@@ -21,19 +21,29 @@ namespace Technomate.Controllers
 
         public IActionResult Portfolio()
         {
-            int companyId = HttpContext.Session.GetInt32("CompanyId") ?? 0;
-            if (companyId == 0)
-                return RedirectToAction("Login", "Account");
-
-            var data = _repo.GetByCompany(companyId);
+            var data = _repo.GetAllPortfolios();
             return View(data);
         }
 
         public IActionResult PortfolioDetails(int id)
         {
-            var item = _repo.GetById(id);
-            if (item == null) return NotFound();
-            return View(item);
+            var portfolio = _repo.GetById(id);
+            if (portfolio == null)
+                return NotFound();
+
+            var recentProjects = _repo.GetAllPortfolios()
+                                      .Where(p => p.Id != id)
+                                      .Take(6)
+                                      .ToList();
+
+            var vm = new PortfolioDetailsViewModel
+            {
+                Portfolio = portfolio,
+                RecentProjects = recentProjects,
+                Categories = recentProjects.Select(p => p.Category).Distinct()
+            };
+
+            return View(vm);
         }
 
         public IActionResult Create()
@@ -93,7 +103,37 @@ namespace Technomate.Controllers
 
         public IActionResult Portfolio2()
         {
-            return View();
+            var portfolios = _repo.GetAllPortfolios();
+
+            var categories = portfolios
+                .Select(p => p.Category)
+                .Distinct()
+                .ToList();
+
+            ViewBag.Categories = categories;
+
+            return View(portfolios);
+        }
+
+        public IActionResult PortfolioDetails2(int id)
+        {
+            var portfolio = _repo.GetById(id);
+            if (portfolio == null)
+                return NotFound();
+
+            var recentProjects = _repo.GetAllPortfolios()
+                                      .Where(p => p.Id != id)
+                                      .Take(6)
+                                      .ToList();
+
+            var vm = new PortfolioDetailsViewModel
+            {
+                Portfolio = portfolio,
+                RecentProjects = recentProjects,
+                Categories = recentProjects.Select(p => p.Category).Distinct()
+            };
+
+            return View(vm);
         }
 
     }

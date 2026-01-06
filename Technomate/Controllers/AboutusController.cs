@@ -6,10 +6,12 @@ namespace Technomate.Controllers
     public class AboutusController : Controller
     {
         private readonly ISettingRepository _settingRepo;
+        private readonly ITestimonialRepository _testimonialRepo;
 
-        public AboutusController(ISettingRepository repo)
+        public AboutusController(ISettingRepository settingRepo, ITestimonialRepository testimonialRepo)
         {
-            _settingRepo = repo;
+            _settingRepo = settingRepo;
+            _testimonialRepo = testimonialRepo;
         }
 
         public IActionResult Aboutus()
@@ -20,7 +22,12 @@ namespace Technomate.Controllers
 
         public IActionResult Aboutus2()
         {
-            return View();
+            var setting = _settingRepo.GetSetting();
+            var testimonials = _testimonialRepo.GetAllTestimonials();
+
+            ViewBag.Testimonials = testimonials;
+
+            return View(setting);
         }
     }
 

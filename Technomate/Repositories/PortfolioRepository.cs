@@ -50,6 +50,10 @@ namespace Technomate.Repository
                 .Where(p => p.CompanyId == companyId)
                 .ToList();
         }
-        
+        public List<Portfolio> GetAllPortfolios()
+        {
+            return _context.Portfolios.ToList();
+        }
+
     }
 }
