@@ -1,0 +1,91 @@
+﻿@model Technomate.Models.BlogDetailsViewModel
+@{
+    Layout = "_Layout2";
+}
+
+<body class="blog-details-page">
+    <main class="main">
+
+        <div class="page-title dark-background" style="background-image: url(assets/img/page-title-bg.jpg);">
+            <div class="container position-relative">
+                <h1>@Model.Blog.Title</h1>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="/">Home</a></li>
+                        <li class="current">@Model.Blog.Title</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-8">
+                    <section id="blog-details" class="blog-details section">
+                        <article class="article">
+
+                            <div class="post-img">
+                                <img src="~/@Model.Blog.ImageUrl" class="img-fluid rounded mb-4" alt="@Model.Blog.Title">
+                            </div>
+
+                            <div class="meta-top">
+                                <ul>
+                                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> @Model.Blog.Author</li>
+                                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <time datetime="@Model.Blog.PublishedDate.ToString("yyyy-MM-dd")">@Model.Blog.PublishedDate.ToString("MMM dd, yyyy")</time></li>
+                                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> @Model.Blog.CommentsCount Comments</li>
+                                </ul>
+                            </div>
+
+                            <div class="content">
+                                @Html.Raw(Model.Blog.Content)
+                            </div>
+
+                            <div class="meta-bottom">
+                                <i class="bi bi-folder"></i>
+                                <ul class="cats">
+                                    <li>@Model.Blog.Category</li>
+                                </ul>
+                            </div>
+
+                        </article>
+                    </section>
+                </div>
+
+                <div class="col-lg-4 sidebar">
+                    <div class="widgets-container">
+
+                        <!-- Categories Widget -->
+                        <div class="categories-widget widget-item">
+                            <h3 class="widget-title">Categories</h3>
+                            <ul class="mt-3">
+                                @foreach (var cat in Model.Categories)
+                                {
+                                    <li><a href="#">@cat</a></li>
+                                }
+                            </ul>
+                        </div>
+
+                        <!-- Recent Posts Widget -->
+                        <div class="recent-posts-widget widget-item">
+                            <h3 class="widget-title">Recent Posts</h3>
+                            @foreach (var post in Model.RecentPosts)
+                            {
+                                <div class="post-item">
+                                    <img src="@post.ImageUrl" alt="@post.Title" class="flex-shrink-0">
+                                    <div>
+                                        <h4><a href="@Url.Action("BlogDetails2", "Blog", new { slug = post.Slug })">@post.Title</a></h4>
+                                        <time datetime="@post.PublishedDate.ToString("yyyy-MM-dd")">@post.PublishedDate.ToString("MMM dd, yyyy")</time>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+</body>

@@ -135,5 +135,51 @@ public class BlogController : Controller
         return RedirectToAction("Blog");
     }
 
+    public async Task<IActionResult> Blog2(int page = 1)
+    {
+        int pageSize = 6; // number of blogs per page
+        var allBlogs = await _repo.GetAllBlogsAsync();
+        int totalBlogs = allBlogs.Count;
+        var blogsToShow = allBlogs
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .ToList();
 
+        var recentPosts = await _repo.GetRecentBlogsAsync(5);
+        var categories = await _repo.GetCategoriesAsync();
+
+        var model = new BlogViewModel
+        {
+            Blogs = blogsToShow,
+            RecentPosts = recentPosts,
+            Categories = categories,
+            CurrentPage = page,
+            TotalPages = (int)Math.Ceiling(totalBlogs / (double)pageSize)
+        };
+
+        return View(model);
+    }
+
+    // Blog details page
+    public async Task<IActionResult> BlogDetails2(string slug)
+    {
+        if (string.IsNullOrEmpty(slug))
+            return RedirectToAction("Blog2");
+
+        var blog = await _repo.GetBlogBySlugAsync(slug);
+        if (blog == null)
+            return NotFound();
+
+        var recentPosts = await _repo.GetRecentBlogsAsync(5);
+        var categories = await _repo.GetCategoriesAsync();
+
+        var model = new BlogDetailsViewModel
+        {
+            Blog = blog,
+            RecentPosts = recentPosts,
+            Categories = categories
+        };
+
+        return View(model);
+    }
 }

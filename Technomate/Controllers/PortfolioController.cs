@@ -91,7 +91,10 @@ namespace Technomate.Controllers
             return RedirectToAction("Portfolio");
         }
 
-
+        public IActionResult Portfolio2()
+        {
+            return View();
+        }
 
     }
 }

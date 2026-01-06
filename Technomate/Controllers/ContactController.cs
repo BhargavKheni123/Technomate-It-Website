@@ -46,5 +46,10 @@ namespace Technomate.Controllers
             ViewBag.Message = TempData["Message"];
             return View();
         }
+
+        public IActionResult Contact2()
+        {
+            return View();
+        }
     }
 }

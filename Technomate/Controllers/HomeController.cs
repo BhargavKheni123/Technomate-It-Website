@@ -58,5 +58,9 @@ namespace Technomate.Controllers
                 RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
             });
         }
+        public IActionResult Index2()
+        {
+            return View();
+        }
     }
 }

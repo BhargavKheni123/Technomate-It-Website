@@ -17,6 +17,11 @@ namespace Technomate.Controllers
             var setting = _settingRepo.GetSetting();
             return View(setting);
         }
+
+        public IActionResult Aboutus2()
+        {
+            return View();
+        }
     }
 
 }

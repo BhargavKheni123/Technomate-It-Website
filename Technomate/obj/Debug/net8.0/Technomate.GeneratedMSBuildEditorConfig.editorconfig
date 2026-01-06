@@ -24,6 +24,10 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXR1c1xBYm91dHVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projects/technomate-it/Technomate/Views/Aboutus/Aboutus2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXR1c1xBYm91dHVzMi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projects/technomate-it/Technomate/Views/Admin/CompanyMaster.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ29tcGFueU1hc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -40,8 +44,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xCbG9nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projects/technomate-it/Technomate/Views/Blog/Blog2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xCbG9nMi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projects/technomate-it/Technomate/Views/Blog/BlogDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xCbG9nRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/technomate-it/Technomate/Views/Blog/BlogDetails2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xCbG9nRGV0YWlsczIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/technomate-it/Technomate/Views/Blog/Create.cshtml]
@@ -52,8 +64,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projects/technomate-it/Technomate/Views/Contact/Contact2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxDb250YWN0Mi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projects/technomate-it/Technomate/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/technomate-it/Technomate/Views/Home/Index2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleDIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/technomate-it/Technomate/Views/Home/Privacy.cshtml]
@@ -66,6 +86,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Projects/technomate-it/Technomate/Views/Portfolio/Portfolio.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9ydGZvbGlvXFBvcnRmb2xpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/technomate-it/Technomate/Views/Portfolio/Portfolio2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9ydGZvbGlvXFBvcnRmb2xpbzIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/technomate-it/Technomate/Views/Portfolio/PortfolioDetails.cshtml]
@@ -110,6 +134,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Projects/technomate-it/Technomate/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/technomate-it/Technomate/Views/Shared/_Layout2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/technomate-it/Technomate/Views/Shared/_ValidationScriptsPartial.cshtml]
