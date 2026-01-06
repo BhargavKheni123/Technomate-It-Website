@@ -3,36 +3,48 @@
   "WorkspaceRootPath": "D:\\Projects\\technomate-it\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\views\\portfolio\\portfoliodetails2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\views\\portfolio\\portfoliodetails2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\views\\aboutus\\aboutus2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\views\\aboutus\\aboutus2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\repositories\\portfoliorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\repositories\\portfoliorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\repositories\\iportfoliorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\repositories\\iportfoliorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\controllers\\portfoliocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\controllers\\portfoliocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\controllers\\aboutuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\controllers\\aboutuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\repositories\\testimonialrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\repositories\\testimonialrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\views\\portfolio\\portfolio2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\views\\portfolio\\portfolio2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\repositories\\itestimonialrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\repositories\\itestimonialrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\models\\portfoliodetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\models\\portfoliodetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\models\\testimonial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\models\\testimonial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\models\\portfolio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\models\\portfolio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\views\\aboutus\\aboutus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\views\\aboutus\\aboutus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\repositories\\settingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\repositories\\settingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\repositories\\isettingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\repositories\\isettingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\models\\setting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\models\\setting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,106 +66,141 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BlogController.cs",
-              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Controllers\\BlogController.cs",
-              "RelativeDocumentMoniker": "Technomate\\Controllers\\BlogController.cs",
-              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Controllers\\BlogController.cs",
-              "RelativeToolTip": "Technomate\\Controllers\\BlogController.cs",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAowKQAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T05:39:18.755Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PortfolioDetails2.cshtml",
-              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Views\\Portfolio\\PortfolioDetails2.cshtml",
-              "RelativeDocumentMoniker": "Technomate\\Views\\Portfolio\\PortfolioDetails2.cshtml",
-              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Views\\Portfolio\\PortfolioDetails2.cshtml",
-              "RelativeToolTip": "Technomate\\Views\\Portfolio\\PortfolioDetails2.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAABAAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-06T05:24:38.367Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Portfolio2.cshtml",
-              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Views\\Portfolio\\Portfolio2.cshtml",
-              "RelativeDocumentMoniker": "Technomate\\Views\\Portfolio\\Portfolio2.cshtml",
-              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Views\\Portfolio\\Portfolio2.cshtml",
-              "RelativeToolTip": "Technomate\\Views\\Portfolio\\Portfolio2.cshtml",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAmwF4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-06T05:24:36.556Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PortfolioRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Repositories\\PortfolioRepository.cs",
-              "RelativeDocumentMoniker": "Technomate\\Repositories\\PortfolioRepository.cs",
-              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Repositories\\PortfolioRepository.cs",
-              "RelativeToolTip": "Technomate\\Repositories\\PortfolioRepository.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAUwDcAAAAJAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Program.cs",
+              "RelativeDocumentMoniker": "Technomate\\Program.cs",
+              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Program.cs",
+              "RelativeToolTip": "Technomate\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T05:24:19.933Z",
+              "WhenOpened": "2026-01-06T12:03:36.473Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "IPortfolioRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Repositories\\IPortfolioRepository.cs",
-              "RelativeDocumentMoniker": "Technomate\\Repositories\\IPortfolioRepository.cs",
-              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Repositories\\IPortfolioRepository.cs",
-              "RelativeToolTip": "Technomate\\Repositories\\IPortfolioRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAArAAAAAAAAAA==",
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Models\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Technomate\\Models\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Models\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Technomate\\Models\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA1wBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T05:24:17.884Z",
+              "WhenOpened": "2026-01-06T11:57:56.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TestimonialRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Repositories\\TestimonialRepository.cs",
+              "RelativeDocumentMoniker": "Technomate\\Repositories\\TestimonialRepository.cs",
+              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Repositories\\TestimonialRepository.cs",
+              "RelativeToolTip": "Technomate\\Repositories\\TestimonialRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T11:52:00.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ITestimonialRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Repositories\\ITestimonialRepository.cs",
+              "RelativeDocumentMoniker": "Technomate\\Repositories\\ITestimonialRepository.cs",
+              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Repositories\\ITestimonialRepository.cs",
+              "RelativeToolTip": "Technomate\\Repositories\\ITestimonialRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T11:51:43.387Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "PortfolioDetailsViewModel.cs",
-              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Models\\PortfolioDetailsViewModel.cs",
-              "RelativeDocumentMoniker": "Technomate\\Models\\PortfolioDetailsViewModel.cs",
-              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Models\\PortfolioDetailsViewModel.cs",
-              "RelativeToolTip": "Technomate\\Models\\PortfolioDetailsViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA7AAAAAAAAAA==",
+              "Title": "Testimonial.cs",
+              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Models\\Testimonial.cs",
+              "RelativeDocumentMoniker": "Technomate\\Models\\Testimonial.cs",
+              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Models\\Testimonial.cs",
+              "RelativeToolTip": "Technomate\\Models\\Testimonial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T05:20:37.382Z",
+              "WhenOpened": "2026-01-06T11:51:13.829Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Portfolio.cs",
-              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Models\\Portfolio.cs",
-              "RelativeDocumentMoniker": "Technomate\\Models\\Portfolio.cs",
-              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Models\\Portfolio.cs",
-              "RelativeToolTip": "Technomate\\Models\\Portfolio.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAwwBMAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T05:20:35.061Z",
+              "Title": "Aboutus.cshtml",
+              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Views\\Aboutus\\Aboutus.cshtml",
+              "RelativeDocumentMoniker": "Technomate\\Views\\Aboutus\\Aboutus.cshtml",
+              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Views\\Aboutus\\Aboutus.cshtml",
+              "RelativeToolTip": "Technomate\\Views\\Aboutus\\Aboutus.cshtml",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAKEAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-06T10:34:28.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Aboutus2.cshtml",
+              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Views\\Aboutus\\Aboutus2.cshtml",
+              "RelativeDocumentMoniker": "Technomate\\Views\\Aboutus\\Aboutus2.cshtml",
+              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Views\\Aboutus\\Aboutus2.cshtml",
+              "RelativeToolTip": "Technomate\\Views\\Aboutus\\Aboutus2.cshtml",
+              "ViewState": "AgIAAOMAAAAAAAAAAAAmwPoAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-06T10:31:15.796Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PortfolioController.cs",
-              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Controllers\\PortfolioController.cs",
-              "RelativeDocumentMoniker": "Technomate\\Controllers\\PortfolioController.cs",
-              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Controllers\\PortfolioController.cs",
-              "RelativeToolTip": "Technomate\\Controllers\\PortfolioController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAA6wC8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "SettingRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Repositories\\SettingRepository.cs",
+              "RelativeDocumentMoniker": "Technomate\\Repositories\\SettingRepository.cs",
+              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Repositories\\SettingRepository.cs",
+              "RelativeToolTip": "Technomate\\Repositories\\SettingRepository.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAuwBUAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T05:19:13.528Z",
+              "WhenOpened": "2026-01-06T10:31:08.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ISettingRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Repositories\\ISettingRepository.cs",
+              "RelativeDocumentMoniker": "Technomate\\Repositories\\ISettingRepository.cs",
+              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Repositories\\ISettingRepository.cs",
+              "RelativeToolTip": "Technomate\\Repositories\\ISettingRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T10:31:06.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Setting.cs",
+              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Models\\Setting.cs",
+              "RelativeDocumentMoniker": "Technomate\\Models\\Setting.cs",
+              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Models\\Setting.cs",
+              "RelativeToolTip": "Technomate\\Models\\Setting.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T10:31:00.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AboutusController.cs",
+              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Controllers\\AboutusController.cs",
+              "RelativeDocumentMoniker": "Technomate\\Controllers\\AboutusController.cs",
+              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Controllers\\AboutusController.cs",
+              "RelativeToolTip": "Technomate\\Controllers\\AboutusController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T10:30:30.696Z",
               "EditorCaption": ""
             }
           ]

@@ -49,6 +49,8 @@ namespace Technomate.Controllers
 
         public IActionResult Contact2()
         {
+            var setting = _settingRepo.GetSetting();
+            ViewBag.Setting = setting;
             return View();
         }
     }
