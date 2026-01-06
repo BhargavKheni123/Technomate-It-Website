@@ -1,0 +1,129 @@
+﻿@model Technomate.Models.PortfolioDetailsViewModel
+
+@{
+    Layout = "_Layout2";
+}
+
+<body class="project-details-page">
+
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title dark-background" style="background-image: url(/assets/img/page-title-bg.jpg);">
+            <div class="container position-relative">
+                <h1>@Model.Portfolio.Title</h1>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li>
+                            <a asp-controller="Portfolio" asp-action="Portfolio2">
+                                Projects
+                            </a>
+                        </li>
+                        <li class="current">@Model.Portfolio.Title</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- End Page Title -->
+        <!-- Project Details Section -->
+        <section id="project-details" class="project-details section">
+            <div class="container" data-aos="fade-up">
+
+                <!-- Slider -->
+                <div class="portfolio-details-slider swiper init-swiper">
+                    <script type="application/json" class="swiper-config">
+                        {
+                          "loop": true,
+                          "speed": 600,
+                          "autoplay": { "delay": 5000 },
+                          "slidesPerView": "auto",
+                          "navigation": {
+                            "nextEl": ".swiper-button-next",
+                            "prevEl": ".swiper-button-prev"
+                          },
+                          "pagination": {
+                            "el": ".swiper-pagination",
+                            "type": "bullets",
+                            "clickable": true
+                          }
+                        }
+                    </script>
+
+                    <div class="swiper-wrapper align-items-center">
+                        <div class="swiper-slide">
+                            <img src="@Model.Portfolio.ImageUrl"
+                                 alt="@Model.Portfolio.Title" />
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <div class="row justify-content-between gy-4 mt-4">
+
+                    <!-- Description -->
+                    <div class="col-lg-8">
+                        <div class="portfolio-description">
+                            <h2>@Model.Portfolio.Title</h2>
+                            <p>@Model.Portfolio.ShortDescription</p>
+                        </div>
+                    </div>
+
+                    <!-- Info -->
+                    <div class="col-lg-3">
+                        <div class="portfolio-info">
+                            <h3>Project Information</h3>
+                            <ul>
+                                <li><strong>Category</strong> @Model.Portfolio.Category</li>
+                                <li>
+                                    <strong>Project URL</strong>
+                                    <a href="@Model.Portfolio.DetailsUrl"
+                                       target="_blank">
+                                        @Model.Portfolio.DetailsUrl
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Model.Portfolio.DetailsUrl"
+                                       target="_blank"
+                                       class="btn-visit align-self-start">
+                                        Visit Website
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Recent Projects -->
+                @if (Model.RecentProjects != null && Model.RecentProjects.Any())
+                {
+                    <h3 class="mt-5">Recent Projects</h3>
+
+                    <div class="row gy-4 mt-2">
+                        @foreach (var item in Model.RecentProjects)
+                        {
+                            <div class="col-lg-4 col-md-6">
+                                <a asp-controller="Portfolio"
+                                   asp-action="PortfolioDetails2"
+                                   asp-route-id="@item.Id">
+                                    <img src="@item.ImageUrl"
+                                         class="img-fluid rounded"
+                                         alt="@item.Title" />
+                                    <h6 class="mt-2">@item.Title</h6>
+                                </a>
+                            </div>
+                        }
+                    </div>
+                }
+
+            </div>
+        </section>
+        <!-- End Project Details Section -->
+
+    </main>
+
+</body>

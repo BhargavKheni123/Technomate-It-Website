@@ -3,44 +3,36 @@
   "WorkspaceRootPath": "D:\\Projects\\technomate-it\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\views\\blog\\blogdetails2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\views\\blog\\blogdetails2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\views\\portfolio\\portfoliodetails2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\views\\portfolio\\portfoliodetails2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\views\\blog\\blogdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\views\\blog\\blogdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\repositories\\portfoliorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\repositories\\portfoliorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\models\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\models\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\repositories\\iportfoliorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\repositories\\iportfoliorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\views\\blog\\blog2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\views\\blog\\blog2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\views\\blog\\blog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\views\\blog\\blog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\controllers\\portfoliocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\controllers\\portfoliocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\repositories\\iblogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\repositories\\iblogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\views\\portfolio\\portfolio2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\views\\portfolio\\portfolio2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\repositories\\blogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\repositories\\blogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\models\\portfoliodetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\models\\portfoliodetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\models\\blogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\models\\blogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\models\\blogdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\models\\blogdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|d:\\projects\\technomate-it\\technomate\\models\\portfolio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3AE65D5-7478-489B-AF95-7A9790D7ED13}|Technomate\\Technomate.csproj|solutionrelative:technomate\\models\\portfolio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,124 +54,107 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BlogDetails.cshtml",
-              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Views\\Blog\\BlogDetails.cshtml",
-              "RelativeDocumentMoniker": "Technomate\\Views\\Blog\\BlogDetails.cshtml",
-              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Views\\Blog\\BlogDetails.cshtml",
-              "RelativeToolTip": "Technomate\\Views\\Blog\\BlogDetails.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-05T13:27:42.568Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Blog.cshtml",
-              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Views\\Blog\\Blog.cshtml",
-              "RelativeDocumentMoniker": "Technomate\\Views\\Blog\\Blog.cshtml",
-              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Views\\Blog\\Blog.cshtml",
-              "RelativeToolTip": "Technomate\\Views\\Blog\\Blog.cshtml",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEsAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-05T13:25:08.135Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BlogDetails2.cshtml",
-              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Views\\Blog\\BlogDetails2.cshtml",
-              "RelativeDocumentMoniker": "Technomate\\Views\\Blog\\BlogDetails2.cshtml",
-              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Views\\Blog\\BlogDetails2.cshtml",
-              "RelativeToolTip": "Technomate\\Views\\Blog\\BlogDetails2.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-05T13:19:27.505Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Blog2.cshtml",
-              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Views\\Blog\\Blog2.cshtml",
-              "RelativeDocumentMoniker": "Technomate\\Views\\Blog\\Blog2.cshtml",
-              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Views\\Blog\\Blog2.cshtml",
-              "RelativeToolTip": "Technomate\\Views\\Blog\\Blog2.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACEAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-05T13:19:25.953Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IBlogRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Repositories\\IBlogRepository.cs",
-              "RelativeDocumentMoniker": "Technomate\\Repositories\\IBlogRepository.cs",
-              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Repositories\\IBlogRepository.cs",
-              "RelativeToolTip": "Technomate\\Repositories\\IBlogRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T13:19:02.056Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BlogRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Repositories\\BlogRepository.cs",
-              "RelativeDocumentMoniker": "Technomate\\Repositories\\BlogRepository.cs",
-              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Repositories\\BlogRepository.cs",
-              "RelativeToolTip": "Technomate\\Repositories\\BlogRepository.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAUwDYAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T13:19:00.457Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BlogViewModel.cs",
-              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Models\\BlogViewModel.cs",
-              "RelativeDocumentMoniker": "Technomate\\Models\\BlogViewModel.cs",
-              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Models\\BlogViewModel.cs",
-              "RelativeToolTip": "Technomate\\Models\\BlogViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T13:18:56.505Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BlogDetailsViewModel.cs",
-              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Models\\BlogDetailsViewModel.cs",
-              "RelativeDocumentMoniker": "Technomate\\Models\\BlogDetailsViewModel.cs",
-              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Models\\BlogDetailsViewModel.cs",
-              "RelativeToolTip": "Technomate\\Models\\BlogDetailsViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T13:18:55.268Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Blog.cs",
-              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Models\\Blog.cs",
-              "RelativeDocumentMoniker": "Technomate\\Models\\Blog.cs",
-              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Models\\Blog.cs",
-              "RelativeToolTip": "Technomate\\Models\\Blog.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAiwCkAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T13:18:52.57Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "BlogController.cs",
               "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Controllers\\BlogController.cs",
               "RelativeDocumentMoniker": "Technomate\\Controllers\\BlogController.cs",
               "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Controllers\\BlogController.cs",
               "RelativeToolTip": "Technomate\\Controllers\\BlogController.cs",
-              "ViewState": "AgIAAJ0AAAAAAAAAAAAmwLcAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAowKQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T10:33:13.998Z"
+              "WhenOpened": "2026-01-06T05:39:18.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PortfolioDetails2.cshtml",
+              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Views\\Portfolio\\PortfolioDetails2.cshtml",
+              "RelativeDocumentMoniker": "Technomate\\Views\\Portfolio\\PortfolioDetails2.cshtml",
+              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Views\\Portfolio\\PortfolioDetails2.cshtml",
+              "RelativeToolTip": "Technomate\\Views\\Portfolio\\PortfolioDetails2.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAABAAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-06T05:24:38.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Portfolio2.cshtml",
+              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Views\\Portfolio\\Portfolio2.cshtml",
+              "RelativeDocumentMoniker": "Technomate\\Views\\Portfolio\\Portfolio2.cshtml",
+              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Views\\Portfolio\\Portfolio2.cshtml",
+              "RelativeToolTip": "Technomate\\Views\\Portfolio\\Portfolio2.cshtml",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAmwF4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-06T05:24:36.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PortfolioRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Repositories\\PortfolioRepository.cs",
+              "RelativeDocumentMoniker": "Technomate\\Repositories\\PortfolioRepository.cs",
+              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Repositories\\PortfolioRepository.cs",
+              "RelativeToolTip": "Technomate\\Repositories\\PortfolioRepository.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAUwDcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T05:24:19.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IPortfolioRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Repositories\\IPortfolioRepository.cs",
+              "RelativeDocumentMoniker": "Technomate\\Repositories\\IPortfolioRepository.cs",
+              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Repositories\\IPortfolioRepository.cs",
+              "RelativeToolTip": "Technomate\\Repositories\\IPortfolioRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T05:24:17.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PortfolioDetailsViewModel.cs",
+              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Models\\PortfolioDetailsViewModel.cs",
+              "RelativeDocumentMoniker": "Technomate\\Models\\PortfolioDetailsViewModel.cs",
+              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Models\\PortfolioDetailsViewModel.cs",
+              "RelativeToolTip": "Technomate\\Models\\PortfolioDetailsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T05:20:37.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Portfolio.cs",
+              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Models\\Portfolio.cs",
+              "RelativeDocumentMoniker": "Technomate\\Models\\Portfolio.cs",
+              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Models\\Portfolio.cs",
+              "RelativeToolTip": "Technomate\\Models\\Portfolio.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAwwBMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T05:20:35.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PortfolioController.cs",
+              "DocumentMoniker": "D:\\Projects\\technomate-it\\Technomate\\Controllers\\PortfolioController.cs",
+              "RelativeDocumentMoniker": "Technomate\\Controllers\\PortfolioController.cs",
+              "ToolTip": "D:\\Projects\\technomate-it\\Technomate\\Controllers\\PortfolioController.cs",
+              "RelativeToolTip": "Technomate\\Controllers\\PortfolioController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA6wC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T05:19:13.528Z",
+              "EditorCaption": ""
             }
           ]
         }
