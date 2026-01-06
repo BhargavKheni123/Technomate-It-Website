@@ -33,10 +33,12 @@
     <!-- Header -->
 
         <header id="header" class="header d-flex align-items-center fixed-top">
-            <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-                <a href="@Url.Action("Index", "Home")" class="logo d-flex align-items-center">
-                    <h1 class="sitename">UpConstruction</h1> <span>.</span>
-                </a>
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+            <a href="@Url.Action("Index2", "Home")"
+               class="logo d-flex align-items-center"
+               style="color:#feb900; font-weight:700;">
+                Technomate
+            </a>
 
                 <nav id="navmenu" class="navmenu">
                     <ul>
@@ -47,12 +49,41 @@
                         <li class="dropdown">
                             <a href="#"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                             <ul>
-                                <li><a href="#">Dropdown 1</a></li>
-                                <li><a href="#">Dropdown 2</a></li>
-                                <li><a href="#">Dropdown 3</a></li>
-                                <li><a href="#">Dropdown 4</a></li>
-                                <li><a href="#">Dropdown 5</a></li>
-                                <li><a href="#">Dropdown 6</a></li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="/Service/WebDevelopment2">
+                                    <i class="fa-solid fa-code me-2 " style="color:#feb900;"></i> Web Development
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="/Service/LogoIdentity2">
+                                    <i class="fa-solid fa-id-card me-2 " style="color:#feb900;"></i> Logo & Identity
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="/Service/GraphicsDesign2">
+                                    <i class="fa-solid fa-paintbrush me-2 " style="color:#feb900;"></i> Graphics Design
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="/Service/AppDevelopment2">
+                                    <i class="fa-solid fa-mobile-screen-button me-2 " style="color:#feb900;"></i> App Development
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="/Service/SocialMarketing2">
+                                    <i class="fa-solid fa-bullhorn me-2 " style="color:#feb900;"></i> Social Marketing
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="/Service/ContentCreation2">
+                                    <i class="fa-solid fa-pen-nib me-2 " style="color:#feb900;"></i> Content Creation
+                                </a>
+                            </li>
                             </ul>
                         </li>
                     <li><a href="@Url.Action("Contact2", "Contact")">Contact</a></li>
@@ -79,10 +110,11 @@
                         <span class="sitename">UpConstruction</span>
                     </a>
                     <div class="footer-contact pt-3">
-                        <p>A108 Adam Street</p>
-                        <p>New York, NY 535022</p>
-                        <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-                        <p><strong>Email:</strong> <span>info@example.com</span></p>
+                        <p>310, Hilltown Landmark</p>
+                        <p>Nikol, Ahmedabad</p>
+                        <p>Gujarat, India</p>
+                        <p><strong>Phone:</strong> +91 9558887181</p>
+                        <p><strong>Email:</strong> hr@technomateit.com</p>
                     </div>
                     <div class="social-links d-flex mt-4">
                         <a href=""><i class="bi bi-twitter-x"></i></a>
@@ -97,7 +129,7 @@
                     <ul>
                         <li><a href="@Url.Action("Index", "Home")">Home</a></li>
                         <li><a href="@Url.Action("About", "Home")">About us</a></li>
-                        <li><a href="@Url.Action("Services", "Home")">Services</a></li>
+                        <li><a href="@Url.Action("Services2", "Service")">Services</a></li>
                         <li><a href="#">Terms of service</a></li>
                         <li><a href="#">Privacy policy</a></li>
                     </ul>
@@ -106,12 +138,23 @@
                 <div class="col-lg-2 col-md-3 footer-links">
                     <h4>Our Services</h4>
                     <ul>
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Product Management</a></li>
-                        <li><a href="#">Marketing</a></li>
-                        <li><a href="#">Graphic Design</a></li>
+                        <li>
+                            <a asp-controller="Service" asp-action="AppDevelopment2">Web Design</a>
+                        </li>
+                        <li>
+                            <a asp-controller="Service" asp-action="WebDevelopment2">Web Development</a>
+                        </li>
+                        <li>
+                            <a asp-controller="Service" asp-action="ContentCreation2">Product Management</a>
+                        </li>
+                        <li>
+                            <a asp-controller="Service" asp-action="SocialMarketing2">Marketing</a>
+                        </li>
+                        <li>
+                            <a asp-controller="Service" asp-action="GraphicsDesign2">Graphic Design</a>
+                        </li>
                     </ul>
+
                 </div>
 
                 <div class="col-lg-2 col-md-3 footer-links">

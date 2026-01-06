@@ -104,28 +104,56 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxBcHBEZXZlbG9wbWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projects/technomate-it/Technomate/Views/Service/AppDevelopment2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxBcHBEZXZlbG9wbWVudDIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projects/technomate-it/Technomate/Views/Service/ContentCreation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxDb250ZW50Q3JlYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/technomate-it/Technomate/Views/Service/ContentCreation2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxDb250ZW50Q3JlYXRpb24yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/technomate-it/Technomate/Views/Service/GraphicsDesign.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxHcmFwaGljc0Rlc2lnbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projects/technomate-it/Technomate/Views/Service/GraphicsDesign2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxHcmFwaGljc0Rlc2lnbjIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projects/technomate-it/Technomate/Views/Service/LogoIdentity.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxMb2dvSWRlbnRpdHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/technomate-it/Technomate/Views/Service/LogoIdentity2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxMb2dvSWRlbnRpdHkyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/technomate-it/Technomate/Views/Service/Services.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxTZXJ2aWNlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projects/technomate-it/Technomate/Views/Service/Services2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxTZXJ2aWNlczIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projects/technomate-it/Technomate/Views/Service/SocialMarketing.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxTb2NpYWxNYXJrZXRpbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projects/technomate-it/Technomate/Views/Service/SocialMarketing2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxTb2NpYWxNYXJrZXRpbmcyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projects/technomate-it/Technomate/Views/Service/WebDevelopment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxXZWJEZXZlbG9wbWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/technomate-it/Technomate/Views/Service/WebDevelopment2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxXZWJEZXZlbG9wbWVudDIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/technomate-it/Technomate/Views/Setting/Edit.cshtml]

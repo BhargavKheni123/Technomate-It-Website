@@ -36,5 +36,36 @@ namespace Technomate.Controllers
             return View();
         }
 
+        public IActionResult WebDevelopment2()
+        {
+            return View();
+        }
+        public IActionResult LogoIdentity2()
+        {
+            return View();
+        }
+        public IActionResult GraphicsDesign2()
+        {
+            return View();
+        }
+
+        public IActionResult AppDevelopment2()
+        {
+            return View();
+        }
+
+        public IActionResult SocialMarketing2()
+        {
+            return View();
+        }
+        public ActionResult ContentCreation2()
+        {
+            return View();
+        }
+        public IActionResult Services2()
+        {
+            return View();
+        }
+
     }
 }
