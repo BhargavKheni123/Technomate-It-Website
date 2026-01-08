@@ -19,7 +19,7 @@ builder.Services.AddScoped<ISettingRepository, SettingRepository>();
 builder.Services.AddScoped<IAdminRepository, AdminRepository>();
 builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
 builder.Services.AddScoped<ITestimonialRepository, TestimonialRepository>();
-
+builder.Services.AddScoped<ITestimonialRepository, TestimonialRepository>();
 
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
@@ -52,7 +52,7 @@ app.MapControllerRoute(
     name: "default",
         //pattern: "{controller=Admin}/{action=Login}/{id?}"); //admin panel
         //pattern: "{controller=Home}/{action=Index}/{id?}"); //techno mate 1
-        pattern: "{controller=Home}/{action=Index2}/{id?}"); //techno mate 1
+        pattern: "{controller=Home}/{action=Index2}/{id?}"); //techno mate 2
 
 
 app.Run();

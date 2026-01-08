@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Technomate.Models;
 using Technomate.Repositories;
 
 namespace Technomate.Controllers
@@ -17,18 +18,25 @@ namespace Technomate.Controllers
         public IActionResult Aboutus()
         {
             var setting = _settingRepo.GetSetting();
+
+            var testimonials = _testimonialRepo.GetAll();
+
+            ViewBag.Testimonials = testimonials ?? new List<Testimonial>();
+
             return View(setting);
         }
 
         public IActionResult Aboutus2()
         {
             var setting = _settingRepo.GetSetting();
-            var testimonials = _testimonialRepo.GetAllTestimonials();
 
-            ViewBag.Testimonials = testimonials;
+            var testimonials = _testimonialRepo.GetAll();
+
+            ViewBag.Testimonials = testimonials ?? new List<Testimonial>();
 
             return View(setting);
         }
+
     }
 
 }

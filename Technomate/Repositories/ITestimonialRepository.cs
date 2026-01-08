@@ -1,7 +1,17 @@
-﻿using Technomate.Models; 
+﻿// Repositories/ITestimonialRepository.cs
+using Technomate.Models;
 using System.Collections.Generic;
 
-public interface ITestimonialRepository
+namespace Technomate.Repositories
 {
-    IEnumerable<Testimonial> GetAllTestimonials();
+    public interface ITestimonialRepository
+    {
+        IEnumerable<Testimonial> GetAll();
+        Testimonial GetById(int id);
+        void Add(Testimonial testimonial);
+        void Update(Testimonial testimonial);
+        void Delete(int id);
+        IEnumerable<CompanyMaster> GetAllCompanies();
+
+    }
 }

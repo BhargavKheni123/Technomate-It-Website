@@ -1,13 +1,23 @@
-﻿namespace Technomate.Models
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace Technomate.Models
 {
     public class Testimonial
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Role { get; set; }
-        public string PhotoUrl { get; set; }
-        public string Message { get; set; }
-        public DateTime CreatedAt { get; set; }
-    }
 
+        [Required]
+        public string Name { get; set; }
+
+        [Required]
+        public string Role { get; set; }
+
+        [Required]
+        public string Message { get; set; }
+        public int CompanyId { get; set; }   // ← Add this
+
+
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+    }
 }

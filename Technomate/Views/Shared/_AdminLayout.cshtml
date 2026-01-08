@@ -112,6 +112,13 @@
                                         <p>Create Setting</p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="/Testimonials/Create"
+                                       class="nav-link @(currentController == "Testimonials" && currentAction == "Create" ? "active" : "")">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Create review</p>
+                                    </a>
+                                </li>
                                 @if (role == "SuperAdmin")
                                 {
                                     <li class="nav-item">

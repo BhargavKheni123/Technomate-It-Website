@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+}
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -42,13 +46,38 @@
 
                 <nav id="navmenu" class="navmenu">
                     <ul>
-                        <li><a href="@Url.Action("Index2", "Home")" class="active">Home</a></li>
-                        <li><a href="@Url.Action("Aboutus2", "Aboutus")">About</a></li>
-                        <li><a href="@Url.Action("Portfolio2", "Portfolio")">Portfolio</a></li>
-                        <li><a href="@Url.Action("Blog2", "Blog")">Blog</a></li>
-                        <li class="dropdown">
-                            <a href="#"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                            <ul>
+                    <li>
+                        <a href="@Url.Action("Index2", "Home")"
+                           class="@(currentController == "Home" ? "active" : "")">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Aboutus2", "Aboutus")"
+                           class="@(currentController == "Aboutus" ? "active" : "")">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="@Url.Action("Portfolio2", "Portfolio")"
+                           class="@(currentController == "Portfolio" ? "active" : "")">
+                            Portfolio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="@Url.Action("Blog2", "Blog")"
+                           class="@(currentController == "Blog" ? "active" : "")">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="dropdown @(currentController == "Service" ? "active" : "")">
+                        <a href="#">
+                            <span>Services</span>
+                            <i class="bi bi-chevron-down toggle-dropdown"></i>
+                        </a>
+                        <ul>
                             <li>
                                 <a class="dropdown-item d-flex align-items-center" href="/Service/WebDevelopment2">
                                     <i class="fa-solid fa-code me-2 " style="color:#feb900;"></i> Web Development
@@ -84,10 +113,15 @@
                                     <i class="fa-solid fa-pen-nib me-2 " style="color:#feb900;"></i> Content Creation
                                 </a>
                             </li>
-                            </ul>
-                        </li>
-                    <li><a href="@Url.Action("Contact2", "Contact")">Contact</a></li>
-                    </ul>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Contact2", "Contact")"
+                           class="@(currentController == "Contact" ? "active" : "")">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
                     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
                 </nav>
 
@@ -158,24 +192,24 @@
                 </div>
 
                 <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Hic solutasetp</h4>
+                    <h4>Company</h4>
                     <ul>
-                        <li><a href="#">Molestiae accusamus iure</a></li>
-                        <li><a href="#">Excepturi dignissimos</a></li>
-                        <li><a href="#">Suscipit distinctio</a></li>
-                        <li><a href="#">Dilecta</a></li>
-                        <li><a href="#">Sit quas consectetur</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Nobis illum</h4>
+                    <h4>Support</h4>
                     <ul>
-                        <li><a href="#">Ipsam</a></li>
-                        <li><a href="#">Laudantium dolorum</a></li>
-                        <li><a href="#">Dinera</a></li>
-                        <li><a href="#">Trodelas</a></li>
-                        <li><a href="#">Flexo</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Customer Support</a></li>
                     </ul>
                 </div>
 
