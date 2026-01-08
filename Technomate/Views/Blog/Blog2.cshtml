@@ -46,7 +46,7 @@
                                         </div>
                                     </div>
 
-                                    <p>@blog.Summary</p>
+                                    @Html.Raw(blog.Summary)
 
                                     <hr>
                                     <a href="@Url.Action("BlogDetails2", "Blog", new { slug = blog.Slug })" class="readmore stretched-link">
