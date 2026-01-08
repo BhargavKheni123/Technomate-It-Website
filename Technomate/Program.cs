@@ -52,7 +52,7 @@ app.MapControllerRoute(
     name: "default",
         //pattern: "{controller=Admin}/{action=Login}/{id?}"); //admin panel
         //pattern: "{controller=Home}/{action=Index}/{id?}"); //techno mate 1
-        pattern: "{controller=Home}/{action=Index2}/{id?}"); //techno mate 1
+        pattern: "{controller=Home}/{action=Index2}/{id?}"); //techno mate 2
 
 
 app.Run();
