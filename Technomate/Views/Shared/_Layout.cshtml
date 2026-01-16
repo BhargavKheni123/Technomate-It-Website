@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@inject Technomate.Repositories.ISettingRepository SettingRepo
+@{
+    var setting = SettingRepo.GetSetting();
+    var theme = setting?.Theme ?? "CrimsonSky";
+}
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -25,17 +31,11 @@
     <!-- Main CSS File -->
     <link href="~/assets/css/main.css" rel="stylesheet" />
 
-    <link href="~/css/custom.css" rel="stylesheet" />
+    <link href="~/assets/css/custom.css" rel="stylesheet" />
 
 </head>
 
-@{
-        var setting = SettingRepo.GetSetting();
-        var theme = setting?.Theme ?? "CrimsonSky";
-}
-
 <body class="index-page theme-@theme">
-
     <!-- Header -->
     <header id="header" class="header sticky-top">
 

@@ -1,4 +1,4 @@
-﻿@model Technomate.Models.Portfolio
+﻿@model Technomate.Models.PortfolioDetailsViewModel
 
 <!-- Page Title -->
 <div class="page-title" data-aos="fade">
@@ -7,10 +7,10 @@
             <ol>
                 <li><a href="@Url.Action("Index", "Home")">Home</a></li>
                 <li><a href="@Url.Action("Portfolio", "Portfolio")">Portfolio</a></li>
-                <li class="current">@Model.Title</li>
+                <li class="current">@Model.Portfolio.Title</li>
             </ol>
         </nav>
-        <h1>@Model.Title</h1>
+        <h1>@Model.Portfolio.Title</h1>
     </div>
 </div>
 
@@ -22,12 +22,12 @@
             <div class="col-lg-10">
                 <div class="portfolio-details-card card shadow-sm p-4 mb-5">
                     <div class="portfolio-details-img mb-4">
-                        <img src="@Model.ImageUrl" class="img-fluid rounded" alt="@Model.Title">
+                        <img src="@Model.Portfolio.ImageUrl" class="img-fluid rounded" alt="@Model.Portfolio.Title">
                     </div>
                     <div class="portfolio-details-content">
-                        <h2 class="mb-3">@Model.Title</h2>
-                        <p><strong>Category:</strong> @Model.Category</p>
-                        <p>@Model.ShortDescription</p>
+                        <h2 class="mb-3">@Model.Portfolio.Title</h2>
+                        <p><strong>Category:</strong> @Model.Portfolio.Category</p>
+                        <p>@Model.Portfolio.ShortDescription</p>
                     </div>
 
                     <!-- Back to Portfolio Button -->

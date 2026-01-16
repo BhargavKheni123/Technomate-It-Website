@@ -1,45 +1,187 @@
-﻿/* =========================
-   FORCE TEMPLATE TO USE THEME
-========================= */
-
-/* Navbar active & hover */
-.navmenu a.active,
-.navmenu a:hover {
-    color: var(--primary-color) !important;
+﻿/* MAP TEMPLATE ACCENT TO THEME COLOR */
+body[class*="theme-"] {
+    --accent-color: var(--theme-color);
 }
 
-/* Hero highlighted text (Technomate word) */
-.hero h1 span,
-.hero h2 span {
-    color: var(--primary-color) !important;
+/* =====================================================
+   GLOBAL THEME ENGINE FOR TECHNOMATE
+   (DO NOT TOUCH main.css)
+===================================================== */
+
+/* ---------- THEME COLORS ---------- */
+.theme-CrimsonSky {
+    --theme-color: #C1121F;
 }
 
-/* Get Started button */
-.btn-get-started,
-.get-started-btn,
-.hero .btn {
-    background-color: var(--primary-color) !important;
-    border-color: var(--primary-color) !important;
+.theme-DeepForest {
+    --theme-color: #1B5E20;
+}
+
+.theme-NavyNight {
+    --theme-color: #0A2540;
+}
+
+.theme-ChocolateVelvet {
+    --theme-color: #4E342E;
+}
+
+.theme-MysticPurple {
+    --theme-color: #6A1B9A;
+}
+
+
+/* =====================================================
+   FORCE OVERRIDE TEMPLATE (HARD-CODED COLORS)
+===================================================== */
+
+/* Buttons */
+body[class*="theme-"] .btn,
+body[class*="theme-"] .btn-primary,
+body[class*="theme-"] .btn-get-started,
+body[class*="theme-"] .get-started-btn,
+body[class*="theme-"] button {
+    background-color: var(--theme-color) !important;
+    border-color: var(--theme-color) !important;
     color: #fff !important;
 }
 
-/* Buttons everywhere */
-.btn-primary {
-    background-color: var(--primary-color) !important;
-    border-color: var(--primary-color) !important;
-}
-
 /* Links */
-a {
-    color: var(--primary-color);
+body[class*="theme-"] a {
+    color: var(--theme-color) !important;
 }
 
-    a:hover {
-        color: color-mix(in srgb, var(--primary-color) 85%, black);
+    body[class*="theme-"] a:hover {
+        opacity: 0.85;
     }
 
-/* Icons */
-.bi,
-.fa-solid {
-    color: var(--primary-color);
+/* Navbar */
+body[class*="theme-"] .navmenu a.active,
+body[class*="theme-"] .navmenu a:hover {
+    color: var(--theme-color) !important;
 }
+
+/* Hero Highlight Text */
+body[class*="theme-"] .hero h1 span,
+body[class*="theme-"] .hero h2 span {
+    color: var(--theme-color) !important;
+}
+
+/* Icons */
+body[class*="theme-"] i,
+body[class*="theme-"] .bi,
+body[class*="theme-"] .fa,
+body[class*="theme-"] .fa-solid {
+    color: var(--theme-color) !important;
+}
+
+/* Borders */
+body[class*="theme-"] .border-primary,
+body[class*="theme-"] .card,
+body[class*="theme-"] .form-control:focus {
+    border-color: var(--theme-color) !important;
+}
+
+/* Inputs focus */
+body[class*="theme-"] input:focus,
+body[class*="theme-"] textarea:focus,
+body[class*="theme-"] select:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.15), 0 0 0 0.25rem var(--theme-color) !important;
+    border-color: var(--theme-color) !important;
+}
+
+/* Dropdown active */
+body[class*="theme-"] .dropdown-item.active,
+body[class*="theme-"] .dropdown-item:hover {
+    background-color: var(--theme-color) !important;
+    color: #fff !important;
+}
+
+/* Footer links */
+body[class*="theme-"] footer a:hover {
+    color: var(--theme-color) !important;
+}
+
+/* Scroll / misc highlights */
+body[class*="theme-"] ::selection {
+    background-color: var(--theme-color);
+    color: #fff;
+}
+
+
+
+/* =========================
+   FIX NEWSLETTER SUBSCRIBE BUTTON
+========================= */
+
+/* Normal state */
+body[class*="theme-"] .footer .footer-newsletter .newsletter-form input[type=submit] {
+    background: var(--theme-color) !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+    /* Hover state */
+    body[class*="theme-"] .footer .footer-newsletter .newsletter-form input[type=submit]:hover {
+        background: color-mix(in srgb, var(--theme-color), black 15%) !important;
+    }
+
+
+/* ABOUT SECTION */
+body[class*="theme-"] .about ul li i {
+    color: var(--theme-color) !important;
+}
+
+/* SERVICES SECTION ICON */
+body[class*="theme-"] .service-item .icon i {
+    color: var(--theme-color) !important;
+}
+
+body[class*="theme-"] .service-item:hover .icon {
+    background-color: var(--theme-color) !important;
+}
+
+
+
+/* =========================
+   SAFE THEMED ICONS
+========================= */
+
+/* Icons that should follow theme color */
+body[class*="theme-"] .about ul li i,
+body[class*="theme-"] .entry-meta i,
+body[class*="theme-"] .breadcrumbs i,
+body[class*="theme-"] .footer i {
+    color: var(--theme-color) !important;
+}
+
+/* Icons INSIDE colored circles / boxes should be WHITE */
+body[class*="theme-"] .service-item .icon i,
+body[class*="theme-"] .icon-box i,
+body[class*="theme-"] .btn i {
+    color: #fff !important;
+}
+
+/* =========================
+   BLOG PAGINATION THEME FIX
+========================= */
+
+body[class*="theme-"] .blog-pagination .page-item.active .page-link {
+    background-color: var(--theme-color) !important;
+    border-color: var(--theme-color) !important;
+    color: #fff !important;
+}
+
+body[class*="theme-"] .blog-pagination .page-link {
+    color: var(--theme-color) !important;
+}
+
+    body[class*="theme-"] .blog-pagination .page-link:hover {
+        background-color: var(--theme-color) !important;
+        color: #fff !important;
+        border-color: var(--theme-color) !important;
+    }
+
+    /* Prev / Next icons */
+    body[class*="theme-"] .blog-pagination .page-link i {
+        color: var(--theme-color) !important;
+    }
