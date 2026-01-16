@@ -1,0 +1,43 @@
+﻿body {
+    /* Replace all template orange with your logo color */
+    : root
+
+{
+    --primary-color: #2f5f7a;
+}
+
+/* If template uses orange text */
+.text-orange,
+.navbar .active,
+.navmenu a,
+.dropdown-item i {
+    color: var(--primary-color) !important;
+}
+
+/* Buttons */
+.btn-orange,
+input[type="submit"] {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+    /* Hover effects */
+    .btn-orange:hover,
+    .navmenu a:hover,
+    a:hover {
+        color: #1f4550 !important; /* slightly darker */
+        background-color: #1f4550 !important; /* if button */
+    }
+
+/* Footer links only color */
+.footer a,
+.social-links a i {
+    color: var(--primary-color);
+}
+
+    .footer a:hover,
+    .social-links a:hover i {
+        color: #1f4550;
+    }
+
+}
