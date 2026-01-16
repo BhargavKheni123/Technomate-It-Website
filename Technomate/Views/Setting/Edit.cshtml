@@ -137,6 +137,17 @@
                             <textarea asp-for="AboutFullDescription" class="form-control" rows="6" placeholder="@Model.AboutFullDescription"></textarea>
                         </div>
 
+                        <div class="mb-3">
+                            <label asp-for="Theme" class="form-label">Choose Theme</label>
+                            <select asp-for="Theme" class="form-control">
+                                <option value="CrimsonSky">Crimson Sky</option>
+                                <option value="DeepForest">Deep Forest</option>
+                                <option value="NavyNight">Navy Night</option>
+                                <option value="ChocolateVelvet">Chocolate Velvet</option>
+                                <option value="MysticPurple">Mystic Purple</option>
+                            </select>
+                        </div>
+
                         <button type="submit" class="btn btn-primary w-100">Save Changes</button>
 
                     </form>

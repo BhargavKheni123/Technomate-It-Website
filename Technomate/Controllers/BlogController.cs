@@ -16,18 +16,10 @@ public class BlogController : Controller
 
     public async Task<IActionResult> Blog(int page = 1)
     {
-        int companyId = HttpContext.Session.GetInt32("CompanyId") ?? 0;
-        if (companyId == 0)
-            return RedirectToAction("Login", "Account");
-
-        int pageSize = 10;
-
-        var allBlogs = await _repo.GetBlogsByCompanyAsync(companyId);
-
+        int pageSize = 10; // number of blogs per page
+        var allBlogs = await _repo.GetAllBlogsAsync();
         int totalBlogs = allBlogs.Count;
-        int totalPages = (int)Math.Ceiling((double)totalBlogs / pageSize);
-
-        var blogs = allBlogs
+        var blogsToShow = allBlogs
             .Skip((page - 1) * pageSize)
             .Take(pageSize)
             .ToList();
@@ -37,16 +29,15 @@ public class BlogController : Controller
 
         var model = new BlogViewModel
         {
-            Blogs = blogs,
+            Blogs = blogsToShow,
             RecentPosts = recentPosts,
             Categories = categories,
             CurrentPage = page,
-            TotalPages = totalPages
+            TotalPages = (int)Math.Ceiling(totalBlogs / (double)pageSize)
         };
 
         return View(model);
     }
-
 
 
     public async Task<IActionResult> BlogDetails(string slug)

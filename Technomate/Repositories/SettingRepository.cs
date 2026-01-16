@@ -39,7 +39,14 @@ public class SettingRepository : ISettingRepository
         existing.Point2 = model.Point2;
         existing.Point3 = model.Point3;
         existing.AboutFullDescription = model.AboutFullDescription;
+        existing.Theme = model.Theme;
 
-        _context.SaveChanges(); // EF tracks existing object → no new record if exists
+        _context.SaveChanges(); 
+    }
+
+    public void AddSetting(Setting model)
+    {
+        _context.Setting.Add(model);
+        _context.SaveChanges(); 
     }
 }

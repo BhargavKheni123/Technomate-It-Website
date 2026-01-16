@@ -6,7 +6,7 @@ namespace Technomate.Repositories
     {
         Setting GetSetting();
         void UpdateSetting(Setting setting);
-        
+        void AddSetting(Setting setting);
     }
 
 }
