@@ -1,43 +1,45 @@
-﻿body {
-    /* Replace all template orange with your logo color */
-    : root
+﻿/* =========================
+   FORCE TEMPLATE TO USE THEME
+========================= */
 
-{
-    --primary-color: #2f5f7a;
-}
-
-/* If template uses orange text */
-.text-orange,
-.navbar .active,
-.navmenu a,
-.dropdown-item i {
+/* Navbar active & hover */
+.navmenu a.active,
+.navmenu a:hover {
     color: var(--primary-color) !important;
 }
 
-/* Buttons */
-.btn-orange,
-input[type="submit"] {
+/* Hero highlighted text (Technomate word) */
+.hero h1 span,
+.hero h2 span {
+    color: var(--primary-color) !important;
+}
+
+/* Get Started button */
+.btn-get-started,
+.get-started-btn,
+.hero .btn {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: #fff !important;
+}
+
+/* Buttons everywhere */
+.btn-primary {
     background-color: var(--primary-color) !important;
     border-color: var(--primary-color) !important;
 }
 
-    /* Hover effects */
-    .btn-orange:hover,
-    .navmenu a:hover,
-    a:hover {
-        color: #1f4550 !important; /* slightly darker */
-        background-color: #1f4550 !important; /* if button */
-    }
-
-/* Footer links only color */
-.footer a,
-.social-links a i {
+/* Links */
+a {
     color: var(--primary-color);
 }
 
-    .footer a:hover,
-    .social-links a:hover i {
-        color: #1f4550;
+    a:hover {
+        color: color-mix(in srgb, var(--primary-color) 85%, black);
     }
 
+/* Icons */
+.bi,
+.fa-solid {
+    color: var(--primary-color);
 }

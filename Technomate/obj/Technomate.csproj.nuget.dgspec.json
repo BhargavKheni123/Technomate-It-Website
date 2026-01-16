@@ -10,14 +10,14 @@
         "projectUniqueName": "D:\\Projects\\technomate-it\\Technomate\\Technomate.csproj",
         "projectName": "Technomate",
         "projectPath": "D:\\Projects\\technomate-it\\Technomate\\Technomate.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\vishv\\.nuget\\packages\\",
         "outputPath": "D:\\Projects\\technomate-it\\Technomate\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vishv\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

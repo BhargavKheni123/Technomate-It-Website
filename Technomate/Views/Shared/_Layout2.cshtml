@@ -140,16 +140,9 @@
         <div class="container footer-top">
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 footer-about">
-                    <a href="@Url.Action("Index", "Home")" class="logo d-flex align-items-center">
-                        <span class="sitename">UpConstruction</span>
-                    </a>
-                    <div class="footer-contact pt-3">
-                        <p>310, Hilltown Landmark</p>
-                        <p>Nikol, Ahmedabad</p>
-                        <p>Gujarat, India</p>
-                        <p><strong>Phone:</strong> +91 9558887181</p>
-                        <p><strong>Email:</strong> hr@technomateit.com</p>
-                    </div>
+
+                    @await Component.InvokeAsync("Footer")
+                    
                     <div class="social-links d-flex mt-4">
                         <a href=""><i class="bi bi-twitter-x"></i></a>
                         <a href=""><i class="bi bi-facebook"></i></a>

@@ -15,5 +15,6 @@
         public string Point2 { get; set; }
         public string Point3 { get; set; }
         public string AboutFullDescription { get; set; }
+        public string Theme { get; set; } = "CrimsonSky";
     }
 }

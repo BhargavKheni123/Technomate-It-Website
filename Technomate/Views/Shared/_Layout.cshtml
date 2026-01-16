@@ -24,9 +24,17 @@
 
     <!-- Main CSS File -->
     <link href="~/assets/css/main.css" rel="stylesheet" />
+
+    <link href="~/css/custom.css" rel="stylesheet" />
+
 </head>
 
-<body class="index-page">
+@{
+        var setting = SettingRepo.GetSetting();
+        var theme = setting?.Theme ?? "CrimsonSky";
+}
+
+<body class="index-page theme-@theme">
 
     <!-- Header -->
     <header id="header" class="header sticky-top">
@@ -38,7 +46,7 @@
                     <i class="bi bi-phone ms-4"><span>+91 9558887181</span></i>
                 </div>
                 <div class="social-links d-none d-md-flex align-items-center">
-                    <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a
+                    <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
 
                     <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
                     <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
@@ -154,41 +162,31 @@
         </div>
 
         <div class="container footer-top">
-            <div class="row gy-4">
-                <div class="col-lg-4 col-md-6 footer-about">
-                    <a href="@Url.Action("Index", "Home")" class="d-flex align-items-center">
-                        <span class="sitename">Technomate</span>
-                    </a>
-                    <div class="footer-contact pt-3">
-                        <p>310, Hilltown Landmark</p>
-                        <p>Nikol, Ahmedabad</p>
-                        <p>Gujarat, India</p>
-                        <p><strong>Phone:</strong> +91 9558887181</p>
-                        <p><strong>Email:</strong> hr@technomateit.com</p>
-                    </div>
-                </div>
+    <div class="row gy-4">
 
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="@Url.Action("Index", "Home")">Home</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="@Url.Action("Aboutus", "Aboutus")">About</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="@Url.Action("Services", "Service")">Services</a></li>
-                    </ul>
-                </div>
+        @await Component.InvokeAsync("Footer")
 
-                <div class="col-lg-4 col-md-12">
-                    <h4>Follow Us</h4>
-                    <div class="social-links d-flex">
-                        <a href=""><i class="bi bi-twitter-x"></i></a>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
+        <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+                <li><i class="bi bi-chevron-right"></i> <a href="@Url.Action("Index", "Home")">Home</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="@Url.Action("Aboutus", "Aboutus")">About</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="@Url.Action("Services", "Service")">Services</a></li>
+            </ul>
+        </div>
 
+        <div class="col-lg-4 col-md-12">
+            <h4>Follow Us</h4>
+            <div class="social-links d-flex">
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
             </div>
         </div>
+
+    </div>
+</div>
 
         <div class="container copyright text-center">
             <p>© Copyright <strong>Technomate</strong>. All Rights Reserved</p>
